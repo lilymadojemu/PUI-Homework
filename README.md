@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: `add the URL to your deployed website`
+Deployed website: https://lilymadojemu.github.io/PUI-Homework/
 
 Repository link: https://github.com/lilymadojemu/PUI-Homework
