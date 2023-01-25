@@ -1,0 +1,17 @@
+
+.product-gallery{
+    background-color: white;
+
+}
+
+.bakery-logo{
+    width: 70px;
+    height:70px;
+    object-fit: cover;
+}
+
+.line{
+    height:1px;
+    background:black;
+
+}
