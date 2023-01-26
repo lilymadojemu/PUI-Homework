@@ -1,3 +1,4 @@
+/* Product Gallery Page */
 
 .product-gallery{
     background-color: white;
@@ -15,3 +16,38 @@
     background:black;
 
 }
+
+.product-pics{
+    object-fit: cover;
+    width:70px;
+    height:70px;
+    border: 100px;
+    border-color: black;
+    box-sizing: border-box;
+      
+}
+
+.product-pics:hover{
+    background-color: yellow;
+    color: yellow;
+    cursor: pointer;
+    border: 2px solid #dddddd;
+}
+
+.products{
+    color:black;
+    font-family: sans-serif;
+    font-size:20px;
+    background-color: yellow;
+}
+
+.p{
+    text-decoration: underline;
+    font-family: sans-serif;
+}
+
+/* Shopping Detail Page */
+
+
+
+/* Shopping Cart Page */
