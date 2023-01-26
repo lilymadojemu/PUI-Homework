@@ -51,3 +51,8 @@
 
 
 /* Shopping Cart Page */
+#shopping-line{
+    height:1px;
+    background: black;
+    width:auto;
+}
