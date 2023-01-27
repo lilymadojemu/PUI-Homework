@@ -21,9 +21,9 @@
     object-fit: cover;
     width:70px;
     height:70px;
-    border: 100px;
-    border-color: black;
     box-sizing: border-box;
+    padding:2px;
+    background-color: black;
       
 }
 
@@ -47,6 +47,7 @@
     font-family: sans-serif;
 }
 
+
 /* Shopping Detail Page */
 
 
@@ -56,4 +57,9 @@
     height:1px;
     background: black;
     width:auto;
+}
+
+#remove{
+    font-size: 10px;
+
 }
