@@ -50,7 +50,8 @@ body{
     font-family: sans-serif;
     font-size:20px;
     background-color: yellow;
-    display: inline-block
+    display: inline-block;
+    text-decoration: none;
 }
 
 .p{
