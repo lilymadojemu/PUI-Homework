@@ -6,8 +6,8 @@
 }
 
 .bakery-logo{
-    width: 70px;
-    height:70px;
+    width: 140px;
+    height:100px;
     object-fit: cover;
 }
 
@@ -27,12 +27,22 @@
       
 }
 
-.product-pics:hover{
-    background-color: yellow;
-    color: yellow;
-    cursor: pointer;
-    border: 2px solid #dddddd;
+.bakery-items{
+    text-align: center;
+    font-size: 14px;
 }
+
+.product-pics:hover{
+    cursor: pointer;
+    padding: 10px;
+    background-color: yellow;
+}
+
+body{
+    text-align: center;
+    font-family: sans-serif;
+}
+
 
 /* Use at media */
 .products{
@@ -40,26 +50,45 @@
     font-family: sans-serif;
     font-size:20px;
     background-color: yellow;
+    display: inline-block
 }
 
 .p{
     text-decoration: underline;
+    text-decoration-color: black;
     font-family: sans-serif;
+    text-align: center;
 }
 
 
 /* Shopping Detail Page */
 
+.description{
+    text-align: center;
+}
 
+.selectors{
+    text-align: center;
+}
+
+.adding-to-cart{
+    background-color: yellow;
+}
 
 /* Shopping Cart Page */
 #shopping-line{
-    height:1px;
+    height:2px;
     background: black;
-    width:auto;
+    width: 500px;
+    display: inline-block;
 }
 
-#remove{
+.remove{
     font-size: 10px;
+    text-align: center;
 
+}
+
+.price{
+    text-align: center;
 }
