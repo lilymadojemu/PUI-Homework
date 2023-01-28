@@ -49,8 +49,7 @@
 }
 
 body{
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
     font-family: sans-serif;
 }
 
@@ -72,16 +71,14 @@ body{
     text-decoration: underline;
     text-decoration-color: black;
     font-family: sans-serif;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 
 /* Shopping Detail Page */
 
 .description{
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
     margin-top:1px;
 }
 
@@ -98,8 +95,7 @@ body{
 }
 
 .selectors{
-    margin-right: auto;
-    margin-left: auto;
+    text-align: center;
 }
 
 .adding-to-cart{
@@ -135,6 +131,8 @@ body{
 .price{
     margin-left: auto;
     margin-right: auto;
+    display: inline-block;
+
 }
 
 #checkout-button{
