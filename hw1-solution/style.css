@@ -2,28 +2,30 @@
 
 .product-gallery{
     background-color: white;
-
 }
 
 .bakery-logo{
-    width: 250px;
+    width: 270px;
     height:100px;
     object-fit: cover;
 }
 
 .line{
-    height:1px;
+    margin-top: 80px; 
+    height:5px;
     background:black;
 
 }
 
 .product-pics{
     object-fit: cover;
-    width:70px;
-    height:70px;
+    width:200px;
+    height:200px;
     box-sizing: border-box;
     padding:2px;
     background-color: black;
+    margin-left: auto;
+    margin-right:auto; 
       
 }
 
@@ -36,7 +38,13 @@
     cursor: pointer;
     padding: 10px;
     background-color: yellow;
-    text-decoration: none;
+}
+
+.description-product-gallery:hover{
+    cursor: pointer;
+    padding: 10px;
+    background-color: yellow;
+
 }
 
 body{
@@ -45,15 +53,18 @@ body{
 }
 
 
-/* Use at media */
 .products{
     color:black;
     font-family: sans-serif;
     font-size:20px;
-    background-color: yellow;
     display: inline-block;
     text-decoration: none;
 }
+
+.products:active{
+    background-color: yellow;
+}
+
 
 .p{
     text-decoration: underline;
@@ -68,6 +79,18 @@ body{
 .description{
     text-align: center;
     margin-top:1px;
+}
+
+.detail-pics{
+    object-fit: cover;
+    width:400px;
+    height:400px;
+    box-sizing: border-box;
+    padding:2px;
+    background-color: black;
+    margin-left: auto;
+    margin-right:auto; 
+      
 }
 
 .selectors{
@@ -86,6 +109,18 @@ body{
     display: inline-block;
 }
 
+.shopping-pics{
+    object-fit: cover;
+    width:100px;
+    height:100px;
+    box-sizing: border-box;
+    padding:2px;
+    background-color: black;
+    margin-left: auto;
+    margin-right:auto; 
+      
+}
+
 .remove{
     font-size: 10px;
     text-align: center;
@@ -94,6 +129,11 @@ body{
 
 .price{
     text-align: center;
+}
+
+#checkout-button{
+    background-color: yellow;
+    display: inline-block;
 }
 
 
