@@ -123,8 +123,8 @@ body{
 
 .remove{
     font-size: 10px;
-    text-align: center;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .price{
