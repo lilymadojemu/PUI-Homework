@@ -17,6 +17,18 @@
 
 }
 
+
+.title-product-gallery{
+    margin-bottom: 1px;
+    text-decoration: underline gray;
+}
+
+
+.price-product-gallery{
+    margin-top: 0px;
+
+}
+
 .product-pics{
     object-fit: cover;
     width:200px;
