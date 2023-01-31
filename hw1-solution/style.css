@@ -63,18 +63,22 @@ a:visited{
       
 }
 
-.bakery-items{
-    margin-left: auto;
-    margin-left: auto;
-    font-size: 14px;
-}
-
 .product-pics:hover{
     cursor: pointer;
     padding: 10px;
     background-color: yellow;
 }
+.OG-cinnamon-roll:hover{
+    cursor: pointer;
+    padding: 10px;
+    background-color: yellow;
+}
 
+.bakery-items{
+    margin-left: auto;
+    margin-left: auto;
+    font-size: 14px;
+}
 
 
 body{
@@ -112,7 +116,6 @@ body{
     margin-right:auto; 
       
 }
-
 
 .selectors{
     text-align: center;
@@ -195,8 +198,6 @@ body{
     text-align: center;
     text-decoration: underline gray;
 }
-
-
 
 #checkout-button{
     background-color: yellow;
