@@ -92,9 +92,15 @@ body{
 
 /* Shopping Detail Page */
 
-.description{
-    text-align: center;
-    margin-top:1px;
+.detail-description{
+    text-align: center; 
+}
+
+.detail-description-content{
+    text-align: left;
+    /* https://stackoverflow.com/questions/1269589/css-center-block-but-align-contents-to-the-left */
+    display: inline-block; 
+    
 }
 
 .detail-pics{
@@ -109,40 +115,49 @@ body{
       
 }
 
-/* adding space between price and button */
-.detail-price{
-    font-size: 15px;
-    margin-right: 25px;
-    margin-left: auto;
-    display: inline-block;
-}
 
 .selectors{
     text-align: center;
 }
 
-#pack-size-selector{
-    margin-bottom: 50px;
-    width: 150px;
-
+#glazing-title-selector{
+    margin-right: 150px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    
 }
 
 #glazing-selector{
     width: 150px;
+    margin-right: 45px;
+}
 
+#pack-size-title-selector{
+    margin-right: 140px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+#pack-size-selector{
+    margin-bottom: 50px;
+    width: 150px;
+    margin-right: 45px;
+}
+
+/* adding space between price and button */
+.detail-price{
+    font-size: 13px;
+    margin-right: 25px;
+    margin-left: auto;
+    display: inline-block;
 }
 
 .adding-to-cart{
     background-color: yellow;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 50px;
     display: inline-block;
 }
 
-h6{
-    margin-bottom: 10px;
-    text-align: auto;
-}
 /* Shopping Cart Page */
 
 #CART{
