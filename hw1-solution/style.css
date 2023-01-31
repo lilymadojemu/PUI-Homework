@@ -1,21 +1,21 @@
 /* Product Gallery Page */
 
 
-#PRODUCTS-product-gallery{
+.PRODUCTS{
     background-color: yellow;
     text-decoration: none;
     display: inline-block;
+    margin-bottom: 10px;
 }
 
 .CART{
+    margin-top: 5px;
+}
+a:link{
     text-decoration: none;
 }
 
-.CART:link{
-    text-decoration: none;
-}
-
-.CART:visited{
+a:visited{
     text-decoration: none;
 }
 
@@ -90,12 +90,6 @@ body{
 
 /* Shopping Detail Page */
 
-#PRODUCTS-detail{
-    background-color: yellow;
-    text-decoration: none;
-    display: inline-block;
-}
-
 .detail-description{
     text-align: center; 
 }
@@ -164,10 +158,16 @@ body{
 
 /* Shopping Cart Page */
 
+#PRODUCTS-shopping{
+    margin-bottom: 10px;
+}
+
 #CART-shopping{
     background-color: yellow;
     text-decoration: none;
-    display: inline-block;}
+    display: inline-block;
+    margin-top: 5px;
+}
 
 #shopping-line {
     height:2px;
