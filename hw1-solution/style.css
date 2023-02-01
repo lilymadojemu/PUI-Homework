@@ -206,6 +206,7 @@ body{
 
 /* Appearance of PRODUCTS link on the shopping cart page */
 
+/* PRODUCTS link appearance for the shopping car page */
 #PRODUCTS-shopping{
     margin-bottom: 10px;
     font-weight: 100;
@@ -226,29 +227,28 @@ body{
 
 }
 
-#shopping-line {
-    height:2px;
-    background: black;
-    margin-left: auto;
-    margin-right: auto;
-    width: 800px;
+/* Heading of the shopping cart page */
+#shopping-heading{
+    margin:auto;
+    padding:20px; 
+    width: 130px;
 }
 
+/* Pictures of the items "in cart" */
 .shopping-pics{
     object-fit: cover;
     display:block;
     margin-left: auto;
     margin-right: auto;
-    width:50px;
-    height:50px;
+    width:80px;
+    height:80px;
     box-sizing: border-box;
     padding:2px;
     background-color: black;
-    margin-left: auto;
-    margin-right:auto; 
       
 }
 
+/* "remove" link at the bottom of pictures in the shopping cart*/
 .remove{
     margin-top: 1px;
     font-size: 7px;
@@ -256,12 +256,48 @@ body{
     text-decoration: underline gray;
 }
 
-#checkout-button{
-    background-color: yellow;
-}
-
 .description-shopping-cart{
     font-size: 14px;
+    display:block;
+    margin: auto;
+    width: fit-content;
+}
+
+.description-shopping-content{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+/* line dividing in cart products with the total cost of them */
+#shopping-line {
+    height:2px;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+.shopping-price{
+    font-size: 14px;
+    display:block;
+    margin: auto;
+    margin-top: 1px;
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+#shopping-total{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+#checkout-button{
+    background-color: yellow;
+    font-size: 14px;
+    display:block;
+    margin: auto;
+    width: 100px;
+    margin-bottom:100px
 }
 
 
