@@ -1,25 +1,4 @@
-/* Product Gallery Page */
-
-
-.PRODUCTS{
-    background-color: yellow;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.CART{
-    margin-top: 5px;
-}
-
-/* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
-a:link{
-    text-decoration: none;
-}
-
-a:visited{
-    text-decoration: none;
-}
+/* Universal */
 
 /* dimensions of the bakery logo*/
 .bakery-logo{
@@ -39,24 +18,80 @@ a:visited{
 
 }
 
-.page-headings{
-    margin-top: 50px;
-    font-size: 20px;
+/* Appearance connected to the PRODUCTS and CART links at top of the 3 pages */
+.top-page-links{
+    color:black;
+    font-size:17px;
+    display:block;
+    margin: auto;
+    width: 100px;
 }
 
-/* Appearance of the titles of each bakery items picture on first/product gallery page */
-.title-product-gallery{
-    margin-right: 70px;
+/* Appearance of PRODUCTS link for Gallery and Detail Page */
+.PRODUCTS{
+    background-color: yellow;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Appearance of CART link for Gallery and Detail Page */
+.CART{
+    margin-top: 5px;
+    margin-right: auto;
     margin-left: auto;
-    margin-top: 1px;
-    margin-bottom: auto;
+    font-weight: 100;
+    width: 50px;
+    display: block;
+}
+
+
+/* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
+/* Removes the underline from PRODUCTS and CART Links */
+a:link{
+    text-decoration: none;
+}
+
+/* Appearance of the headings on top of each page */
+.page-headings{
+    font-size: 17px;
+    display:block;
+    margin:auto;
+    padding: 20px; 
+    width: 300px;
+}
+
+/* Font-family of all text pages of the website */
+body{
+    font-family: sans-serif;
+}
+
+/* Product Gallery Page */
+
+/* Centering Heading Text for Gallery Page */
+#gallery-heading{
+    display:block;
+    margin:auto;
+    padding:20px; 
+    width: 350px;
+}
+/* Appearance of the titles of each bakery items picture on first/product gallery page */
+
+.title-product-gallery{
+    display:block;
+    margin: auto;
+    width: 200px;
     text-decoration: underline gray;
 }
 
 /* Appearance of the prices of each bakery items picture on first/product gallery page */
 .price-product-gallery{
-    margin-right: 160px;
-    margin-top: 1px;
+    display:block;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 30px;
+    
 }
 
 /* Dimensions of product pictures on the first page */
@@ -81,58 +116,49 @@ a:visited{
     background-color: yellow;
 }
 
-/* .bakery-items{
-    margin-left: auto;
-    margin-left: auto;
-    font-size: 14px;
-} */
-
-
-body{
-    font-family: sans-serif;
-}
-
-.top-page-links{
-    color:black;
-    font-family: sans-serif;
-    font-size:15px;
-}
-
 /* Shopping Detail Page */
 
+/* Heading for detail page, adjusted for width compared to other pages */
+.detail-heading{
+    display:block;
+    margin: auto;
+    padding: 20px; 
+    width: 190px;
+}
+
+/* Appearance of description that appears underneath image on detail page */
 .detail-description{
-    text-align: center; 
+    display:block;
+    margin: auto;
+    width: 200px;
 }
 
-.detail-description-content{
-    text-align: left;
-    /* https://stackoverflow.com/questions/1269589/css-center-block-but-align-contents-to-the-left */
-    display: inline-block; 
-    
-}
-
+/* Image that appears on the detail page */
 .detail-pics{
     object-fit: cover;
     display:block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width:400px;
     height:400px;
     box-sizing: border-box;
     padding:2px;
     background-color: black;
-    margin-left: auto;
-    margin-right:auto; 
-      
 }
 
+/* Drop down menus */
 .selectors{
-    text-align: center;
+    display:block;
+    margin: auto;
+    width: 100px;
 }
 
 #glazing-title-selector{
-    margin-right: 150px;
+    display:block;
+    margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
     font-size: 13px;
     
 }
@@ -170,15 +196,26 @@ body{
 
 /* Shopping Cart Page */
 
+/* Appearance of PRODUCTS link on the shopping cart page */
+
 #PRODUCTS-shopping{
     margin-bottom: 10px;
+    font-weight: 100;
+
 }
 
+/* Appearance of CART link on the shopping cart page */
 #CART-shopping{
     background-color: yellow;
     text-decoration: none;
-    display: inline-block;
     margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50px;
+    display: block;
+    font-weight: bold;
+
+
 }
 
 #shopping-line {
