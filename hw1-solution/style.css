@@ -50,7 +50,7 @@ a:link{
     text-decoration: none;
 }
 
-/* Font-family of all text pages of the website */
+/* Font-family of all text on the website */
 body{
     font-family: sans-serif;
 }
@@ -65,14 +65,12 @@ body{
     padding:20px; 
     width: 260px;
 }
-/* Appearance of the titles of each bakery items picture on first/product gallery page */
-
+/* Appearance of the titles of each bakery items picture on the gallery page */
 .title-product-gallery{
     display:block;
     margin: auto;
     text-decoration: underline gray;
     width: 200px;
-
 }
 
 /* Appearance of the prices of each bakery items picture on first/product gallery page */
@@ -85,7 +83,7 @@ body{
     
 }
 
-/* Dimensions of product pictures on the first page */
+/* Dimensions and Centering of bakery items' pictures on the gallery page */
 .product-pics{
     background-color: black;
     box-sizing: border-box;
@@ -123,7 +121,7 @@ body{
     width: 200px;
 }
 
-/* Image that appears on the detail page */
+/* Image of product that appears on the detail page */
 .detail-pics{
     background-color: black;
     box-sizing: border-box;
@@ -177,25 +175,22 @@ body{
     margin-right: 25px;
 }
 
-/* Button to "add to cart" */
+/* Button for "add to cart" */
 .adding-to-cart{
     background-color: yellow;
     display: inline-block;
     margin-right: 50px;
 }
 
-/* price and button elements */
+/* Concerning the price of detailed item and the button to add to cart*/
 .detail-elements{
     display:block;
     margin-bottom: 100px;
     margin: auto;
     width: 200px;
-    
 }
 
 /* Shopping Cart Page */
-
-/* Appearance of PRODUCTS link on the shopping cart page */
 
 /* PRODUCTS link appearance for the shopping car page */
 #PRODUCTS-shopping{
