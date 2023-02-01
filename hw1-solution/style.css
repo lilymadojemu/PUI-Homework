@@ -247,21 +247,22 @@ body{
 /* "remove" link at the bottom of pictures in the shopping cart*/
 .remove{
     display: block;
+    margin: auto;
     font-size: 7px;
+    font-weight: bold;
     margin-top: 1px;
     text-decoration: underline gray;
+    width: 30px;
 }
 
+/* description of shopping cart item underneath each picture */
+/* Credits text-align centering:https://www.w3.org/Style/Examples/007/center.en.tmpl */
 .description-shopping-cart{
     display:block;
     font-size: 14px;
     margin: auto;
+    text-align: center;
     width: fit-content;
-}
-
-.description-shopping-content{
-    margin-bottom: 1px;
-    margin-top: 1px;
 }
 
 /* line dividing in cart products with the total cost of them */
@@ -279,7 +280,7 @@ body{
     margin: auto;
     margin-bottom: 30px;
     margin-top: 1px;
-    width: 50px; 
+    width: 40px; 
 }
 
 #shopping-total{
