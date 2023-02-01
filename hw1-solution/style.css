@@ -1,6 +1,6 @@
 /* Universal */
 
-/* dimensions of the bakery logo*/
+/* Bakery Shop Logo*/
 .bakery-logo{
    box-sizing: border-box; 
    object-fit: cover;
@@ -16,7 +16,7 @@
     margin-top: auto; 
 }
 
-/* Appearance connected to the PRODUCTS and CART links at top of the 3 pages */
+/* Appearance of the PRODUCTS and CART links at top of the 3 pages */
 .top-page-links{
     color:black;
     display:block;
@@ -50,15 +50,6 @@ a:link{
     text-decoration: none;
 }
 
-/* Appearance of the headings on top of each page */
-.page-headings{
-    display:block;
-    font-size: 17px;
-    margin:auto;
-    padding: 20px; 
-    width: 300px;
-}
-
 /* Font-family of all text pages of the website */
 body{
     font-family: sans-serif;
@@ -66,12 +57,13 @@ body{
 
 /* Product Gallery Page */
 
-/* Centering SpecificHeading Text for Gallery Page */
+/* Heading for the Gallery Page */
 #gallery-heading{
     display:block;
+    font-size: 17px;
     margin:auto;
     padding:20px; 
-    width: 350px;
+    width: 260px;
 }
 /* Appearance of the titles of each bakery items picture on first/product gallery page */
 
@@ -227,7 +219,7 @@ body{
 #shopping-heading{
     margin:auto;
     padding:20px; 
-    width: 130px;
+    width: 120px;
 }
 
 /* Pictures of the items "in cart" */
