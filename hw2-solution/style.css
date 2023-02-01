@@ -1,0 +1,293 @@
+/* Universal */
+
+/* Bakery Shop Logo*/
+.bakery-logo{
+   box-sizing: border-box; 
+   object-fit: cover;
+   padding: 30px;
+   width: 400px;
+}
+
+/* Line dividing the logo from the rest of information on the three pages */
+.line{
+    background:black;
+    height:5px; 
+    margin-bottom: auto;
+    margin-top: auto; 
+}
+
+/* Appearance of the PRODUCTS and CART links at top of the 3 pages */
+.top-page-links{
+    color:black;
+    display:block;
+    font-size:17px;
+    margin: auto;
+    width: 100px;
+}
+
+/* Appearance of PRODUCTS link for Gallery and Detail Page */
+.PRODUCTS{
+    background-color: yellow;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Appearance of CART link for Gallery and Detail Page */
+.CART{
+    display: block;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 50px;   
+}
+
+/* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
+/* Removes the underline from PRODUCTS and CART Links */
+a:link{
+    text-decoration: none;
+}
+
+/* Font-family of all text on the website */
+body{
+    font-family: sans-serif;
+}
+
+/* Product Gallery Page */
+
+/* Heading for the Gallery Page */
+#gallery-heading{
+    display:block;
+    font-size: 17px;
+    margin:auto;
+    padding:20px; 
+    width: 260px;
+}
+/* Appearance of the titles of each bakery items picture on the gallery page */
+.title-product-gallery{
+    display:block;
+    margin: auto;
+    text-decoration: underline gray;
+    width: 200px;
+}
+
+/* Appearance of the prices of each bakery items picture on first/product gallery page */
+.price-product-gallery{
+    display:block;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 200px;
+    
+    
+}
+
+/* Dimensions and Centering of bakery items' pictures on the gallery page */
+.product-pics{
+    background-color: black;
+    box-sizing: border-box;
+    display:block;
+    height:200px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    padding:2px;
+    width:200px; 
+}
+
+/* Original Cinnamon roll pic and text highlight properties*/
+.OG-cinnamon-roll:hover{
+    background-color: yellow;
+    cursor: pointer;
+    margin-left: 480px;
+    margin-right: 480px;
+}
+
+/* Shopping Detail Page */
+
+/* Heading for detail page, adjusted for width compared to other pages */
+.detail-heading{
+    display:block;
+    margin: auto;
+    padding: 20px; 
+    width: 190px;
+}
+
+/* Appearance of description that appears underneath image on detail page */
+.detail-description{
+    display:block;
+    margin: auto;
+    width: 200px;
+}
+
+/* Image of product that appears on the detail page */
+.detail-pics{
+    background-color: black;
+    box-sizing: border-box;
+    display:block;
+    height:400px;
+    margin: auto;
+    object-fit: cover;
+    padding:2px;
+    width:400px;
+}
+
+/* Drop down menus */
+.selectors{
+    display:block;
+    margin: auto;
+    width: 200px;
+    
+}
+
+/*"Glazing" title for drop down menu */
+#glazing-title-selector{
+    font-size: 13px;
+    font-weight: lighter;  
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Specific Drop Down menu for Glazing */
+#glazing-selector{
+    width: 150px;
+}
+
+/* "Pack Size" title for drop down menu */
+#pack-size-title-selector{
+    font-size: 13px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+/* Specific drop down menu for Pack Size */
+#pack-size-selector{
+    margin-bottom: 50px;
+    width: 150px;
+}
+
+/* Price of the image detailed */
+.detail-price{
+    display: inline-block;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+/* Button for "add to cart" */
+.adding-to-cart{
+    background-color: yellow;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+/* Concerning the price of detailed item and the button to add to cart*/
+.detail-elements{
+    display:block;
+    margin-bottom: 100px;
+    margin: auto;
+    width: 200px;
+}
+
+/* Shopping Cart Page */
+
+/* PRODUCTS link appearance for the shopping car page */
+#PRODUCTS-shopping{
+   font-weight: 100;
+   margin-bottom: 10px;
+}
+
+/* Appearance of CART link on the shopping cart page */
+#CART-shopping{
+    background-color: yellow;
+    display: block;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 50px;
+}
+
+/* Heading of the shopping cart page */
+#shopping-heading{
+    margin:auto;
+    padding:20px; 
+    width: 120px;
+}
+
+/* Pictures of the items "in cart" */
+.shopping-pics{
+    background-color: black;
+    box-sizing: border-box;
+    display:block;
+    height:80px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    padding:2px;
+    width:80px;      
+}
+
+/* "remove" link at the bottom of pictures in the shopping cart*/
+.remove{
+    display: block;
+    font-size: 7px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 1px;
+    text-decoration: underline gray;
+    width: 30px;
+}
+
+/* description of shopping cart item underneath each picture */
+/* Credits text-align centering:https://www.w3.org/Style/Examples/007/center.en.tmpl */
+.description-shopping-cart{
+    display:block;
+    font-size: 14px;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+}
+
+/* line dividing in cart products with the total cost of them */
+#shopping-line {
+    background: black;
+    height:2px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+/* prices displayed underneath the pics in the shopping */
+.shopping-price{
+    display:block;
+    font-size: 14px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 1px;
+    width: 40px; 
+}
+
+/* Total and price from the items in the shopping cart */
+.shopping-total{
+    display:block;
+    font-size: 14px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 90px;
+}
+
+/* Checkout Button */
+#checkout-button{
+    background-color: yellow;
+    display:block;
+    font-size: 14px;
+    margin: auto;
+    margin-bottom:100px;
+    width: 100px;
+}
+
+
