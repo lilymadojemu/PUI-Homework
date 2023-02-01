@@ -2,27 +2,25 @@
 
 /* dimensions of the bakery logo*/
 .bakery-logo{
-    width: 400px;
-    padding: 30px;
-    object-fit: cover;
-    box-sizing: border-box;
-
+   box-sizing: border-box; 
+   object-fit: cover;
+   padding: 30px;
+   width: 400px;
 }
 
 /* Line dividing the logo from the rest of information on the three pages */
 .line{
-    margin-top: auto; 
-    margin-bottom: auto;
-    height:5px;
     background:black;
-
+    height:5px; 
+    margin-bottom: auto;
+    margin-top: auto; 
 }
 
 /* Appearance connected to the PRODUCTS and CART links at top of the 3 pages */
 .top-page-links{
     color:black;
-    font-size:17px;
     display:block;
+    font-size:17px;
     margin: auto;
     width: 100px;
 }
@@ -30,20 +28,20 @@
 /* Appearance of PRODUCTS link for Gallery and Detail Page */
 .PRODUCTS{
     background-color: yellow;
-    text-decoration: none;
     display: block;
-    margin-bottom: 10px;
     font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
 }
 
 /* Appearance of CART link for Gallery and Detail Page */
 .CART{
-    margin-top: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    font-weight: 100;
-    width: 50px;
     display: block;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 50px;   
 }
 
 
@@ -55,8 +53,8 @@ a:link{
 
 /* Appearance of the headings on top of each page */
 .page-headings{
-    font-size: 17px;
     display:block;
+    font-size: 17px;
     margin:auto;
     padding: 20px; 
     width: 300px;
@@ -81,39 +79,40 @@ body{
 .title-product-gallery{
     display:block;
     margin: auto;
-    width: 200px;
     text-decoration: underline gray;
+    width: 200px;
+
 }
 
 /* Appearance of the prices of each bakery items picture on first/product gallery page */
 .price-product-gallery{
     display:block;
     margin: auto;
-    width: 200px;
     margin-bottom: 30px;
+    width: 200px;
+    
     
 }
 
 /* Dimensions of product pictures on the first page */
 .product-pics{
-    object-fit: cover;
+    background-color: black;
+    box-sizing: border-box;
     display:block;
+    height:200px;
     margin-left: auto;
     margin-right: auto;
-    width:200px;
-    height:200px;
-    box-sizing: border-box;
+    object-fit: cover;
     padding:2px;
-    background-color: black;
-     
+    width:200px; 
 }
 
 /* Original Cinnamon roll pic and text highlight properties*/
 .OG-cinnamon-roll:hover{
-    cursor: pointer;
-    margin-right: 480px;
-    margin-left: 480px;
     background-color: yellow;
+    cursor: pointer;
+    margin-left: 480px;
+    margin-right: 480px;
 }
 
 /* Shopping Detail Page */
@@ -135,14 +134,14 @@ body{
 
 /* Image that appears on the detail page */
 .detail-pics{
-    object-fit: cover;
-    display:block;
-    margin: auto;
-    width:400px;
-    height:400px;
-    box-sizing: border-box;
-    padding:2px;
     background-color: black;
+    box-sizing: border-box;
+    display:block;
+    height:400px;
+    margin: auto;
+    object-fit: cover;
+    padding:2px;
+    width:400px;
 }
 
 /* Drop down menus */
@@ -155,10 +154,10 @@ body{
 
 /*"Glazing" title for drop down menu */
 #glazing-title-selector{
+    font-size: 13px;
+    font-weight: lighter;  
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 13px;
-    font-weight: lighter;   
 }
 
 /* Specific Drop Down menu for Glazing */
@@ -168,9 +167,9 @@ body{
 
 /* "Pack Size" title for drop down menu */
 #pack-size-title-selector{
-    margin-bottom: 10px;
     font-size: 13px;
     font-weight: lighter;
+    margin-bottom: 10px;
 }
 
 /* Specific drop down menu for Pack Size */
@@ -181,25 +180,26 @@ body{
 
 /* Price of the image detailed */
 .detail-price{
-    font-size: 13px;
-    margin-right: 25px;
-    margin-left: auto;
     display: inline-block;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: 25px;
 }
 
 /* Button to "add to cart" */
 .adding-to-cart{
     background-color: yellow;
-    margin-right: 50px;
     display: inline-block;
+    margin-right: 50px;
 }
 
 /* price and button elements */
 .detail-elements{
     display:block;
+    margin-bottom: 100px;
     margin: auto;
     width: 200px;
-    margin-bottom: 100px;
+    
 }
 
 /* Shopping Cart Page */
@@ -208,23 +208,20 @@ body{
 
 /* PRODUCTS link appearance for the shopping car page */
 #PRODUCTS-shopping{
-    margin-bottom: 10px;
-    font-weight: 100;
-
+   font-weight: 100;
+   margin-bottom: 10px;
 }
 
 /* Appearance of CART link on the shopping cart page */
 #CART-shopping{
     background-color: yellow;
-    text-decoration: none;
-    margin-top: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 50px;
     display: block;
     font-weight: bold;
-
-
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 50px;
 }
 
 /* Heading of the shopping cart page */
@@ -236,68 +233,69 @@ body{
 
 /* Pictures of the items "in cart" */
 .shopping-pics{
-    object-fit: cover;
+    background-color: black;
+    box-sizing: border-box;
     display:block;
+    height:80px;
     margin-left: auto;
     margin-right: auto;
-    width:80px;
-    height:80px;
-    box-sizing: border-box;
+    object-fit: cover;
     padding:2px;
-    background-color: black;
-      
+    width:80px;      
 }
 
 /* "remove" link at the bottom of pictures in the shopping cart*/
 .remove{
-    margin-top: 1px;
+    display: block;
     font-size: 7px;
-    text-align: center;
+    margin-top: 1px;
     text-decoration: underline gray;
 }
 
 .description-shopping-cart{
-    font-size: 14px;
     display:block;
+    font-size: 14px;
     margin: auto;
     width: fit-content;
 }
 
 .description-shopping-content{
-    margin-top: 1px;
     margin-bottom: 1px;
+    margin-top: 1px;
 }
 
 /* line dividing in cart products with the total cost of them */
 #shopping-line {
-    height:2px;
     background: black;
+    height:2px;
     margin-left: auto;
     margin-right: auto;
     width: 600px;
 }
 
 .shopping-price{
-    font-size: 14px;
     display:block;
+    font-size: 14px;
     margin: auto;
-    margin-top: 1px;
-    width: 50px;
     margin-bottom: 30px;
+    margin-top: 1px;
+    width: 50px; 
 }
 
 #shopping-total{
-    margin-top: 20px;
     margin-bottom: 10px;
+    margin-top: 20px;
     width: 100px;
 }
+
+/* Checkout Button */
 #checkout-button{
     background-color: yellow;
-    font-size: 14px;
     display:block;
+    font-size: 14px;
+    margin-bottom:100px;
     margin: auto;
     width: 100px;
-    margin-bottom:100px
 }
 
 
