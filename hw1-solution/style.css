@@ -44,7 +44,6 @@
     width: 50px;   
 }
 
-
 /* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
 /* Removes the underline from PRODUCTS and CART Links */
 a:link{
@@ -67,7 +66,7 @@ body{
 
 /* Product Gallery Page */
 
-/* Centering Heading Text for Gallery Page */
+/* Centering SpecificHeading Text for Gallery Page */
 #gallery-heading{
     display:block;
     margin:auto;
