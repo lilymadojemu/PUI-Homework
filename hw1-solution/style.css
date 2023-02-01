@@ -11,6 +11,8 @@
 .CART{
     margin-top: 5px;
 }
+
+/* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
 a:link{
     text-decoration: none;
 }
@@ -19,18 +21,19 @@ a:visited{
     text-decoration: none;
 }
 
-.product-gallery{
-    background-color: white;
-}
-
+/* dimensions of the bakery logo*/
 .bakery-logo{
-    width: 270px;
-    height:100px;
+    width: 400px;
+    padding: 30px;
     object-fit: cover;
+    box-sizing: border-box;
+
 }
 
+/* Line dividing the logo from the rest of information on the three pages */
 .line{
-    margin-top: 80px; 
+    margin-top: auto; 
+    margin-bottom: auto;
     height:5px;
     background:black;
 
@@ -41,26 +44,33 @@ a:visited{
     font-size: 20px;
 }
 
+/* Appearance of the titles of each bakery items picture on first/product gallery page */
 .title-product-gallery{
-    margin-bottom: 1px;
+    margin-right: 70px;
+    margin-left: auto;
+    margin-top: 1px;
+    margin-bottom: auto;
     text-decoration: underline gray;
 }
 
+/* Appearance of the prices of each bakery items picture on first/product gallery page */
 .price-product-gallery{
-    margin-top: 0px;
-
+    margin-right: 160px;
+    margin-top: 1px;
 }
 
 /* Dimensions of product pictures on the first page */
 .product-pics{
     object-fit: cover;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     width:200px;
     height:200px;
     box-sizing: border-box;
     padding:2px;
     background-color: black;
-    margin-left: auto;
-    margin-right:auto;       
+     
 }
 
 /* Original Cinnamon roll pic and text highlight properties*/
@@ -71,15 +81,14 @@ a:visited{
     background-color: yellow;
 }
 
-.bakery-items{
+/* .bakery-items{
     margin-left: auto;
     margin-left: auto;
     font-size: 14px;
-}
+} */
 
 
 body{
-    text-align: center;
     font-family: sans-serif;
 }
 
@@ -104,6 +113,9 @@ body{
 
 .detail-pics{
     object-fit: cover;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     width:400px;
     height:400px;
     box-sizing: border-box;
@@ -179,6 +191,9 @@ body{
 
 .shopping-pics{
     object-fit: cover;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     width:50px;
     height:50px;
     box-sizing: border-box;
