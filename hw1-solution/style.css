@@ -274,6 +274,7 @@ body{
     width: 600px;
 }
 
+/* prices displayed underneath the pics in the shopping */
 .shopping-price{
     display:block;
     font-size: 14px;
@@ -283,10 +284,14 @@ body{
     width: 40px; 
 }
 
-#shopping-total{
+/* Total and price from the items in the shopping cart */
+.shopping-total{
+    display:block;
+    font-size: 14px;
+    margin: auto;
     margin-bottom: 10px;
     margin-top: 20px;
-    width: 100px;
+    width: 90px;
 }
 
 /* Checkout Button */
