@@ -149,38 +149,37 @@ body{
 .selectors{
     display:block;
     margin: auto;
-    width: 100px;
-}
-
-#glazing-title-selector{
-    display:block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-    font-size: 13px;
+    width: 200px;
     
 }
 
-#glazing-selector{
-    width: 150px;
-    margin-right: 45px;
-}
-
-#pack-size-title-selector{
-    margin-right: 140px;
+/*"Glazing" title for drop down menu */
+#glazing-title-selector{
+    margin-top: 10px;
     margin-bottom: 10px;
     font-size: 13px;
+    font-weight: lighter;   
 }
 
+/* Specific Drop Down menu for Glazing */
+#glazing-selector{
+    width: 150px;
+}
+
+/* "Pack Size" title for drop down menu */
+#pack-size-title-selector{
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+/* Specific drop down menu for Pack Size */
 #pack-size-selector{
     margin-bottom: 50px;
     width: 150px;
-    margin-right: 45px;
 }
 
-/* adding space between price and button */
+/* Price of the image detailed */
 .detail-price{
     font-size: 13px;
     margin-right: 25px;
@@ -188,10 +187,19 @@ body{
     display: inline-block;
 }
 
+/* Button to "add to cart" */
 .adding-to-cart{
     background-color: yellow;
     margin-right: 50px;
     display: inline-block;
+}
+
+/* price and button elements */
+.detail-elements{
+    display:block;
+    margin: auto;
+    width: 200px;
+    margin-bottom: 100px;
 }
 
 /* Shopping Cart Page */
