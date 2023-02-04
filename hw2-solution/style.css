@@ -240,16 +240,17 @@ body{
 
 /* PRODUCTS link appearance for the shopping car page */
 #PRODUCTS-shopping{
-   font-weight: 100;
-   margin-bottom: 10px;
+    display: inline-block;
+    font-weight: 100;
+    margin-bottom: 10px;
 }
 
 /* Appearance of CART link on the shopping cart page */
 #CART-shopping{
     background-color: yellow;
-    display: block;
+    display: inline-block;
     font-weight: bold;
-    margin-left: auto;
+    margin-left: 50px;
     margin-right: auto;
     margin-top: 5px;
     text-decoration: none;
