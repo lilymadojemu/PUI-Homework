@@ -12,18 +12,23 @@
     background:black;
     height:5px; 
     margin-bottom: auto;
-    margin-top: auto; 
+    margin-top: 25px; 
 }
-
+/* rectangle encompassing all the pages */
+/* #rectangle{
+    display: flex;
+    border-color: black;
+    height:5px;
+    width: 200px;
+    
+} */
 /* Encompases the content at the top of the page that is universal to the gallery, detail, and cart pages */
 .top-page-elements{
     display: flex;
 }
-
 .left-page{
     flex-grow: 1;
 }
-
 .right-page{
     width: calc(100% - 450px);    
 }
@@ -31,28 +36,27 @@
 /* Appearance of the PRODUCTS and CART links at top of the 3 pages */
 .top-page-links{
     color:black;
-    display:flex;
-    flex-grow: 1;
+    display: inline-block;
+    margin-left: 500px;
+    margin-top: 45px;
     font-size:17px;
-    margin: auto;
-    margin-bottom: 65px;
     width: 1000px;
 }
 
 /* Appearance of PRODUCTS link for Gallery and Detail Page */
 .PRODUCTS{
     background-color: yellow;
+    display: inline-block;
     font-weight: bold;
     margin-bottom: auto;
-    margin-right: auto;
     text-decoration: none;
 }
 
 /* Appearance of CART link for Gallery and Detail Page */
 .CART{
+    display: inline-block;
     font-weight: 100;
-    margin-bottom: auto;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-right: auto;
     margin-top: auto;
 }
