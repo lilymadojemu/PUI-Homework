@@ -99,6 +99,21 @@ body{
     padding:20px; 
     width: 260px;
 }
+/* All displayed products and their names & prices */
+.bakery-products{
+    display:flex;
+    flex-wrap: wrap;
+}
+/* Row at the top of gallery page consisting of 3 products */
+.top-row{
+    display: flex;
+
+}
+/* Row at bottom of gallery page consisting of 3 products */
+.bottom-row{
+    display: flex;
+
+}
 /* Appearance of the titles of each bakery items picture on the gallery page */
 .title-product-gallery{
     display:block;
@@ -113,15 +128,12 @@ body{
     margin: auto;
     margin-bottom: 30px;
     width: 200px;
-    
-    
 }
 
 /* Dimensions and Centering of bakery items' pictures on the gallery page */
 .product-pics{
     background-color: black;
     box-sizing: border-box;
-    display:block;
     height:200px;
     margin-left: auto;
     margin-right: auto;
