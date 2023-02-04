@@ -9,69 +9,78 @@
     </head>
 
     <body>
-        <div id="rectangle"></div>
-        <div class="top-page-elements">
-            <div class="left-page">
-                <!-- Logo for the Bun Bun Bake Shop -->
-                <div class="bakery-logo">
-                    <a href="index.html"><img src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
+        <div id="rectangle">
+
+            <div class="top-page-elements">
+                <div class="left-page">
+                    <!-- Logo for the Bun Bun Bake Shop -->
+                    <div class="bakery-logo">
+                        <a href="index.html"><img src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
+                    </div>
+                </div>
+
+                <div class="right-page">
+                    <!-- PRODUCTS and CART links to go to the gallery or shopping cart pages respectively-->
+                    <div class="top-page-links">
+                        <a href="index.html"><h4 class="PRODUCTS">PRODUCTS</h4></a>
+                        <a href="shopping.html"><h4 class="CART">CART</h4></a>
+                    </div> 
+                    
+                    <!--Line to divide bakery logo at top of page from the rest of gallery content-->
+                    <div class="line"></div>
+
+                    <!-- Product Detail Page's Heading -->
+                    <h4 class="detail-heading">Original cinnamon roll</h4>
                 </div>
             </div>
 
-            <div class="right-page">
-                <!-- PRODUCTS and CART links to go to the gallery or shopping cart pages respectively-->
-                <div class="top-page-links">
-                    <a href="index.html"><h4 class="PRODUCTS">PRODUCTS</h4></a>
-                    <a href="shopping.html"><h4 class="CART">CART</h4></a>
-                </div> 
+            <div class="detail-content">
+                <!-- Left side of detail page -->
+                <div class="left-detail">
+                    <!-- Image of the Original Cinnamon Roll Product -->
+                    <img class="detail-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original cinnamon roll">
+                </div>
                 
-                <!--Line to divide bakery logo at top of page from the rest of gallery content-->
-                <div class="line"></div>
+                <!-- Right side of detail page -->
+                <div class="right-detail">
+                    <!-- Description of the Original Cinnamon Roll for Product Detail Page -->
+                    <div class="detail-description">
+                        <p>Customize our delicious,
+                        hand-made cinnamon roll to 
+                        your liking!</p>
+                    </div>
 
-                <!-- Product Detail Page's Heading -->
-                <h4 class="detail-heading">Original cinnamon roll</h4>
+                    <!-- Drop Down Menus for Glazing and Pack Size -->
+                    <div class="selectors">
+                        <h6 id="glazing-title-selector"> Glazing:</h6>
+                        <select name="glazing-drop-down" id="glazing-selector">
+                            <option value="original"> Keep Original</option>
+                            <option value="sugar milk"> Sugar Milk</option>
+                            <option value="vanilla milk"> Vanilla Milk</option>
+                            <option value="double chocolate"> Double Chocolate</option>
+                        </select>
+
+                        <h6 id="pack-size-title-selector">Pack Size:</h6>
+                        <select name="pack-size-drop-down" id="pack-size-selector">
+                            <option value="one"> 1</option>
+                            <option value="three"> 3</option>
+                            <option value="six"> 6</option>
+                            <option value="twelve"> 12</option>
+                        </select>
+                    </div>
+
+                    <div class="detail-elements">
+
+                        <!-- Price for the Product appearing on the Detail Page -->
+                        <p class="detail-price"> $2.49 </p>
+
+                        <!-- Button to add the product appearing on the Detail Page to a shopping cart-->
+                        <button class="adding-to-cart">
+                            Add to Cart
+                        </button>
+                </div>
             </div>
-        </div>
-
-
-        <!-- Image of the Original Cinnamon Roll Product -->
-        <img class="detail-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original cinnamon roll">
-        
-        <!-- Description of the Original Cinnamon Roll for Product Detail Page -->
-        <div class="detail-description">
-            <p>Customize our delicious,
-            hand-made cinnamon roll to 
-            your liking!</p>
-        </div>
-
-        <!-- Drop Down Menus for Glazing and Pack Size -->
-        <div class="selectors">
-            <h6 id="glazing-title-selector"> Glazing:</h6>
-            <select name="glazing-drop-down" id="glazing-selector">
-                <option value="original"> Keep Original</option>
-                <option value="sugar milk"> Sugar Milk</option>
-                <option value="vanilla milk"> Vanilla Milk</option>
-                <option value="double chocolate"> Double Chocolate</option>
-            </select>
-
-            <h6 id="pack-size-title-selector">Pack Size:</h6>
-            <select name="pack-size-drop-down" id="pack-size-selector">
-                <option value="one"> 1</option>
-                <option value="three"> 3</option>
-                <option value="six"> 6</option>
-                <option value="twelve"> 12</option>
-            </select>
-        </div>
-
-        <div class="detail-elements">
-
-            <!-- Price for the Product appearing on the Detail Page -->
-            <p class="detail-price"> $2.49 </p>
-
-            <!-- Button to add the product appearing on the Detail Page to a shopping cart-->
-            <button class="adding-to-cart">
-                Add to Cart
-            </button>
+            
         </div>
     </body>
 </html>

@@ -8,75 +8,76 @@
     </head>
 
     <body>
-        <div id="rectangle"> </div>
-        <div class="top-page-elements">
-            <div class="left-page">
-                <!-- Logo for the Bun Bun Bake Shop -->
-                <div class="bakery-logo">
-                    <a href="index.html"><img src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
+        <div id="rectangle">
+            <div class="top-page-elements">
+                <div class="left-page">
+                    <!-- Logo for the Bun Bun Bake Shop -->
+                    <div class="bakery-logo">
+                        <a href="index.html"><img src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
+                    </div>
+                </div>
+
+                <div class="right-page">
+                    <!-- PRODUCTS and CART links to go to the gallery or shopping cart pages respectively-->
+                    <div class="top-page-links">
+                        <a href="index.html"><h4 id="PRODUCTS-shopping">PRODUCTS</h4></a>
+                        <a href="shopping.html"><h4 id="CART-shopping">CART</h4></a>
+                    </div> 
+                    <!--Line to divide bakery logo at top of page from the rest of gallery content-->
+                    <div class="line"></div>
+
+                    <!-- Heading for the Shopping Cart Page -->
+                    <h4 id="shopping-heading">Shopping Cart</h4> 
                 </div>
             </div>
 
-            <div class="right-page">
-                <!-- PRODUCTS and CART links to go to the gallery or shopping cart pages respectively-->
-                <div class="top-page-links">
-                    <a href="index.html"><h4 id="PRODUCTS-shopping">PRODUCTS</h4></a>
-                    <a href="shopping.html"><h4 id="CART-shopping">CART</h4></a>
-                </div> 
-                <!--Line to divide bakery logo at top of page from the rest of gallery content-->
-                <div class="line"></div>
+            <!-- Image of Original Cinnamon Roll-->
+            <img class="shopping-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
+            
+            <!-- "remove" that appears below the Original Cinnamon Roll-->
+            <p class="remove">Remove</p>
 
-                <!-- Heading for the Shopping Cart Page -->
-                <h4 id="shopping-heading">Shopping Cart</h4> 
+            <!-- Description of the Original Cinnamon Roll in the cart to include its name, glazing type, and pack size -->
+            <div class="description-shopping-cart">
+                <p>Original Cinnamon roll  
+                <br>Glazing: Keep Original 
+                <br>Pack Size: 1</p>
             </div>
+
+            <!-- Price of the Original Cinnamon Roll -->
+            <p class="shopping-price"> 
+                $2.49
+            </p>
+
+            <!-- Image of Double Chocolate Cinnamon Roll-->
+            <img class="shopping-pics" src="bakery_products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate cinnamon roll">
+            
+            <!-- "remove" that appears below the Double Chocolate Cinnamon Roll-->
+            <p class="remove">Remove</p>
+
+            <!-- Description of the Double Chocolate CInnamon Roll in the cart to include its name, glazing type, and pack size -->
+            <div class="description-shopping-cart">
+                <p>Double Chocolate Cinnamon Roll 
+                    <br>Glazing: Sugar Milk 
+                    <br> Pack Size: 6</p>
+            </div>
+            
+            <!-- Price of Double Chocolate Cinnamon Roll -->
+            <p class="shopping-price"> 
+                $27.45
+            </p>
+
+            <!--Line to divide the shopping cart's contents from total price-->
+            <div id="shopping-line"></div>
+
+            <!-- Total price of items in the shopping cart -->
+            <p class="shopping-total">Total: $29.94</p>
+            
+            <!-- Button to "checkout" the items in the shopping cart -->
+            <button id="checkout-button">
+                Checkout
+            </button>
         </div>
-
-        <!-- Image of Original Cinnamon Roll-->
-        <img class="shopping-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
-        
-        <!-- "remove" that appears below the Original Cinnamon Roll-->
-        <p class="remove">Remove</p>
-
-        <!-- Description of the Original Cinnamon Roll in the cart to include its name, glazing type, and pack size -->
-        <div class="description-shopping-cart">
-            <p>Original Cinnamon roll  
-            <br>Glazing: Keep Original 
-            <br>Pack Size: 1</p>
-        </div>
-
-        <!-- Price of the Original Cinnamon Roll -->
-        <p class="shopping-price"> 
-            $2.49
-        </p>
-
-        <!-- Image of Double Chocolate Cinnamon Roll-->
-        <img class="shopping-pics" src="bakery_products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate cinnamon roll">
-        
-        <!-- "remove" that appears below the Double Chocolate Cinnamon Roll-->
-        <p class="remove">Remove</p>
-
-        <!-- Description of the Double Chocolate CInnamon Roll in the cart to include its name, glazing type, and pack size -->
-        <div class="description-shopping-cart">
-            <p>Double Chocolate Cinnamon Roll 
-                <br>Glazing: Sugar Milk 
-                <br> Pack Size: 6</p>
-        </div>
-        
-        <!-- Price of Double Chocolate Cinnamon Roll -->
-        <p class="shopping-price"> 
-            $27.45
-        </p>
-
-        <!--Line to divide the shopping cart's contents from total price-->
-        <div id="shopping-line"></div>
-
-        <!-- Total price of items in the shopping cart -->
-        <p class="shopping-total">Total: $29.94</p>
-        
-        <!-- Button to "checkout" the items in the shopping cart -->
-        <button id="checkout-button">
-            Checkout
-        </button>
     </body>
 </html>
 
