@@ -15,6 +15,7 @@
     margin-top: 25px; 
 }
 /* rectangle encompassing all the pages */
+/* Credits: https://www.computerhope.com/issues/ch001392.htm */
 #rectangle{
     border-width: 3px;
     border-style: solid;
@@ -95,9 +96,10 @@ body{
 
 /* Heading for the Gallery Page */
 #gallery-heading{
-    display:block;
     font-size: 17px;
     margin:auto;
+    margin-left: 5px;
+    font-weight: lighter;
     padding:20px; 
     width: 260px;
 }
@@ -150,16 +152,18 @@ body{
     cursor: pointer;
     margin-left: 480px;
     margin-right: 480px;
+    font-weight: bold;
 }
 
 /* Shopping Detail Page */
 
 /* Heading for detail page, adjusted for width compared to other pages */
 .detail-heading{
-    display:block;
-    margin: auto;
+    margin-left: 5px;
+    font-weight: lighter;
+    font-size: 20px;
     padding: 20px; 
-    width: 190px;
+    width: 200px;
 }
 /* Container for content of detail page */
 .detail-content{
@@ -167,15 +171,14 @@ body{
 }
 /* Left side of detail page */
 .left-detail{
-
+    display: flex;
 }
 
 /* Right side of detail page */
 .right-detail{
     margin-left: auto;
     margin-right: auto;
-    width:calc(100%-400px);
-
+    flex-grow: 1;
 }
 /* Appearance of description that appears underneath image on detail page */
 .detail-description{
@@ -188,12 +191,11 @@ body{
 .detail-pics{
     background-color: black;
     box-sizing: border-box;
-    display:block;
-    height:400px;
-    margin: auto;
+    height:500px;
+    flex-grow: 1;
     object-fit: cover;
     padding:2px;
-    width:400px;
+    width:calc(100%-200px);
 }
 
 /* Drop down menus */
@@ -276,9 +278,39 @@ body{
 
 /* Heading of the shopping cart page */
 #shopping-heading{
-    margin:auto;
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 5px;
     padding:20px; 
-    width: 120px;
+    width: 150px;
+}
+
+.shopping-content{
+    display:block;
+}
+
+.right-shopping{
+    display: block;
+    margin-left: 400px;
+}
+
+.OG-cinnamon-roll-cart{
+    display: flex;
+    margin-bottom: 100px;
+
+}
+
+.DC-cinnamon-roll-cart{
+    display: flex;
+    margin-bottom: 100px;
+
+
+}
+
+.shopping-final-elements{
+    display: flex;
+    margin-top: 100px;
 }
 
 /* Pictures of the items "in cart" */
@@ -321,7 +353,7 @@ body{
     height:2px;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: auto;
 }
 
 /* prices displayed underneath the pics in the shopping */
