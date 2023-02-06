@@ -90,6 +90,7 @@ a:active{
 /* Font-family of all text on the website */
 body{
     font-family: sans-serif;
+
 }
 
 /* Product Gallery Page */
@@ -108,7 +109,6 @@ body{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 /* Row at the top of gallery page consisting of 3 products */
 .top-row{
