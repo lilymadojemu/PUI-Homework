@@ -20,6 +20,7 @@
     border-width: 3px;
     border-style: solid;
     border-color: black;
+    margin:auto;
     height:1200px;
     width: 1200px;
     
@@ -97,12 +98,13 @@ body{
 
 /* Heading for the Gallery Page */
 #gallery-heading{
-    font-size: 17px;
+    font-size: 20px;
     margin:auto;
+    margin-top:20px;
     margin-left: 5px;
     font-weight: lighter;
     padding:20px; 
-    width: 260px;
+    width: 290px;
 }
 /* All displayed products and their names & prices */
 .bakery-products{
@@ -158,6 +160,7 @@ body{
 /* Original Cinnamon roll pic and text highlight properties*/
 .OG-cinnamon-roll-gallery:active{
     background-color: yellow;
+    background-size: auto;
     cursor: pointer;
     font-weight: bold;
     height: auto;
