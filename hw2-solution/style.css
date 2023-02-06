@@ -107,15 +107,21 @@ body{
 .bakery-products{
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
+
 }
 /* Row at the top of gallery page consisting of 3 products */
 .top-row{
     display: flex;
+    justify-content: space-evenly;
 
 }
+
 /* Row at bottom of gallery page consisting of 3 products */
 .bottom-row{
     display: flex;
+    justify-content: center;
+
 
 }
 /* Appearance of the titles of each bakery items picture on the gallery page */
@@ -145,14 +151,17 @@ body{
     padding:2px;
     width:200px; 
 }
+.OG-cinnamon-roll{
+    display: flex;
+}
 
 /* Original Cinnamon roll pic and text highlight properties*/
-.OG-cinnamon-roll:hover{
+.OG-cinnamon-roll:active{
     background-color: yellow;
     cursor: pointer;
-    margin-left: 480px;
-    margin-right: 480px;
     font-weight: bold;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 /* Shopping Detail Page */
