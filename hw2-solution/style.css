@@ -156,12 +156,11 @@ body{
 }
 
 /* Original Cinnamon roll pic and text highlight properties*/
-.OG-cinnamon-roll:active{
+.OG-cinnamon-roll-gallery:active{
     background-color: yellow;
     cursor: pointer;
     font-weight: bold;
-    /* margin: auto; */
-    /* margin-bottom: 20px; */
+    height: auto;
     width: auto;
 }
 
