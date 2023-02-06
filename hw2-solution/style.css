@@ -112,21 +112,18 @@ body{
 }
 /* Row at the top of gallery page consisting of 3 products */
 .top-row{
-    display: flex;
-    justify-content: space-evenly;
-
+    display:flex;
+    gap:50px;
 }
 
 /* Row at bottom of gallery page consisting of 3 products */
 .bottom-row{
     display: flex;
-    justify-content: center;
-
-
+    gap:50px;
 }
+
 /* Appearance of the titles of each bakery items picture on the gallery page */
 .title-product-gallery{
-    display:block;
     margin: auto;
     text-decoration: underline gray;
     width: 200px;
@@ -134,12 +131,14 @@ body{
 
 /* Appearance of the prices of each bakery items picture on first/product gallery page */
 .price-product-gallery{
-    display:block;
     margin: auto;
     margin-bottom: 30px;
     width: 200px;
 }
 
+.description-product-gallery{
+    display:block;
+}
 /* Dimensions and Centering of bakery items' pictures on the gallery page */
 .product-pics{
     background-color: black;
@@ -151,8 +150,9 @@ body{
     padding:2px;
     width:200px; 
 }
-.OG-cinnamon-roll{
-    display: flex;
+
+.OG-cinnamon-roll-gallery{
+    display: block;
 }
 
 /* Original Cinnamon roll pic and text highlight properties*/
@@ -160,9 +160,31 @@ body{
     background-color: yellow;
     cursor: pointer;
     font-weight: bold;
-    margin: auto;
-    margin-bottom: 20px;
+    /* margin: auto; */
+    /* margin-bottom: 20px; */
+    width: auto;
 }
+
+.apple-cinnamon-roll-gallery{
+    display: block;
+}
+
+.raisin-cinnamon-roll-gallery{
+    display: block;
+}
+
+.walnut-cinnamon-roll-gallery{
+    display: block;
+}
+
+.double-chocolate-cinnamon-roll-gallery{
+    display: block;
+}
+
+.strawberry-cinnamon-roll-gallery{
+    display: block;
+}
+
 
 /* Shopping Detail Page */
 
