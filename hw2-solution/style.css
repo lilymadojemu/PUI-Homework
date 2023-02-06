@@ -157,14 +157,17 @@ body{
     display: block;
 }
 
+img{
+    object-fit: contain;
+}
+
 /* Original Cinnamon roll pic and text highlight properties*/
 .OG-cinnamon-roll-gallery:active{
-    background-color: yellow;
-    background-size: auto;
+    display:inline-block;
+    background: yellow;
     cursor: pointer;
     font-weight: bold;
-    height: auto;
-    width: auto;
+    margin:auto;
 }
 
 .apple-cinnamon-roll-gallery{
@@ -194,30 +197,38 @@ body{
 .detail-heading{
     margin-left: 5px;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 40px;
     padding: 20px; 
-    width: 200px;
+    width: 400px;
 }
 /* Container for content of detail page */
 .detail-content{
     display:flex;
+    gap:50px;
 }
 /* Left side of detail page */
 .left-detail{
-    display: flex;
+    margin: auto;
+    /* margin-left: 200px; */
+    width: calc(100%-30px);
+
 }
 
 /* Right side of detail page */
 .right-detail{
-    margin-left: auto;
-    margin-right: auto;
-    flex-grow: 1;
+
+    margin: auto; 
+    height: 500px; 
+    font-size: 30px;  
 }
 /* Appearance of description that appears underneath image on detail page */
 .detail-description{
     display:block;
+    font-size: 20px;
+    font-weight: lighter;
     margin: auto;
-    width: 200px;
+    margin-bottom: 60px;
+    width: 300px;
 }
 
 /* Image of product that appears on the detail page */
@@ -228,13 +239,12 @@ body{
     flex-grow: 1;
     object-fit: cover;
     padding:2px;
-    width:calc(100%-200px);
+    width:auto;
 }
 
 /* Drop down menus */
 .selectors{
     display:block;
-    margin: auto;
     width: 200px;
     
 }
@@ -284,7 +294,6 @@ body{
 .detail-elements{
     display:block;
     margin-bottom: 100px;
-    margin: auto;
     width: 200px;
 }
 
