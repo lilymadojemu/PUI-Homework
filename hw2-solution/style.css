@@ -4,7 +4,11 @@
 .bakery-logo{
    box-sizing: border-box; 
    object-fit: cover;
+   height: auto;
+   width: auto;
    padding: 30px;
+   margin: auto;
+
 }
 
 /* Line dividing the logo from the rest of information on the three pages */
