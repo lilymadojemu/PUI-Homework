@@ -21,8 +21,9 @@
     border-style: solid;
     border-color: black;
     margin:auto;
-    height:1200px;
-    width: 1200px;
+    height:auto;
+    max-width: 1200px;
+    width: fit-content;
     
 }
 
@@ -197,36 +198,42 @@ img{
 .detail-heading{
     margin-left: 5px;
     font-weight: lighter;
-    font-size: 40px;
+    font-size: 30px;
     padding: 20px; 
     width: 400px;
+}
+
+.detail-page{
+    margin-bottom: 60px;
 }
 /* Container for content of detail page */
 .detail-content{
     display:flex;
-    gap:50px;
+    justify-content: center;
+    gap: 50px;
 }
 /* Left side of detail page */
 .left-detail{
     margin: auto;
-    /* margin-left: 200px; */
-    width: calc(100%-30px);
+    margin-left: 60px;
+    width: auto;
 
 }
 
 /* Right side of detail page */
 .right-detail{
-
-    margin: auto; 
-    height: 500px; 
+    /* margin: auto;  */
+    height: 550px; 
+    flex-grow: 4;
     font-size: 30px;  
 }
+
 /* Appearance of description that appears underneath image on detail page */
 .detail-description{
     display:block;
     font-size: 20px;
     font-weight: lighter;
-    margin: auto;
+    /* margin: auto; */
     margin-bottom: 60px;
     width: 300px;
 }
@@ -234,8 +241,9 @@ img{
 /* Image of product that appears on the detail page */
 .detail-pics{
     background-color: black;
+    border: 1px solid black;
     box-sizing: border-box;
-    height:500px;
+    height:600px;
     flex-grow: 1;
     object-fit: cover;
     padding:2px;
@@ -251,7 +259,7 @@ img{
 
 /*"Glazing" title for drop down menu */
 #glazing-title-selector{
-    font-size: 13px;
+    font-size: 20px;
     font-weight: lighter;  
     margin-top: 10px;
     margin-bottom: 10px;
@@ -259,41 +267,52 @@ img{
 
 /* Specific Drop Down menu for Glazing */
 #glazing-selector{
-    width: 150px;
+    border: 3px solid black;
+    font-size: 15px;
+    padding: 5px;
+    width: 200px;
+
 }
 
 /* "Pack Size" title for drop down menu */
 #pack-size-title-selector{
-    font-size: 13px;
+    font-size: 20px;
     font-weight: lighter;
     margin-bottom: 10px;
 }
 
 /* Specific drop down menu for Pack Size */
 #pack-size-selector{
+    border: 3px solid black;
+    font-size: 15px;
+    padding: 5px;
     margin-bottom: 50px;
-    width: 150px;
+    width: 200px;
 }
 
 /* Price of the image detailed */
 .detail-price{
     display: inline-block;
-    font-size: 13px;
+    font-weight: bold;
+    font-size: 16px;
     margin-left: auto;
-    margin-right: 25px;
 }
 
 /* Button for "add to cart" */
 .adding-to-cart{
     background-color: yellow;
     display: inline-block;
-    margin-right: 50px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
 }
 
 /* Concerning the price of detailed item and the button to add to cart*/
 .detail-elements{
-    display:block;
-    margin-bottom: 100px;
+    display:inline-block;
+    font-size: 20px;
+    margin-top: 50px;
     width: 200px;
 }
 
