@@ -30,19 +30,23 @@
     margin:0 auto;
     max-width: 1200px;
     width: fit-content;
-    
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 /* Encompases the content at the top of the page that is universal to the gallery, detail, and cart pages */
 .top-page-elements{
     display: flex;
 }
+/* Left content of the top-page elements, AKA the Bakery Logo */
 .left-page{
     flex-grow: 1;
 }
+
+/* Right content of the top-page elements, AKA line, PRODUCT, CART links */
 .right-page{
     width: calc(100% - 450px);    
 }
@@ -75,34 +79,30 @@ a {
     margin-top: auto;
 }
 
-/* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
-/* Removes the underline from PRODUCTS and CART Links */
-
-
 /* Font-family of all text on the website */
 body{
     font-family: sans-serif;
-
 }
 
 /* Product Gallery Page */
 
 /* Heading for the Gallery Page */
 #gallery-heading{
-    font-size: 20px;
+    font-size: 25px;
     margin:auto;
     margin-top:20px;
-    margin-left: 5px;
     font-weight: lighter;
     padding:20px; 
     width: auto;
 }
+
 /* All displayed products and their names & prices */
 .bakery-products{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 /* Row at the top of gallery page consisting of 3 products */
 .top-row{
     display:flex;
@@ -117,24 +117,21 @@ body{
     gap:50px;
 }
 
-/* Appearance of the titles of each bakery items picture on the gallery page */
+/* Names of each bakery item pictured on the gallery page */
 .title-product-gallery{
     margin: auto;
     text-decoration: underline gray;
     width: 200px;
 }
 
-/* Appearance of the prices of each bakery items picture on first/product gallery page */
+/* Price of each bakery items pictured on gallery page */
 .price-product-gallery{
     margin: auto;
-    /* margin-bottom: 30px; */
     width: 200px;
 }
 
-.description-product-gallery{
-    display:block;
-}
-/* Dimensions and Centering of bakery items' pictures on the gallery page */
+
+/* Bakery items' pictures on the gallery page */
 .product-pics{
     background-color: black;
     box-sizing: border-box;
@@ -146,18 +143,16 @@ body{
     width:200px; 
 }
 
+/* Original Cinnamon Roll Product Positioning*/
 .OG-cinnamon-roll-gallery{
     display: block;
 }
 
+/* Highlight Original Cinnamon Roll picture when clicked */
 .OG-cinnamon-roll-gallery img:active {
     background-color: yellow;
     border: 1px solid black;
     margin: auto;
-}
-
-img{
-    object-fit: contain;
 }
 
 /* Original Cinnamon roll pic and text highlight properties*/
@@ -167,22 +162,31 @@ img{
     font-weight: bold;
 }
 
+img{
+    object-fit: contain;
+}
+
+/* Apple Cinnamon Roll Product Positioning*/
 .apple-cinnamon-roll-gallery{
     display: block;
 }
 
+/* Raisin Cinnamon Roll Product Positioning*/
 .raisin-cinnamon-roll-gallery{
     display: block;
 }
 
+/* Walnut Cinnamon Roll Product Positioning*/
 .walnut-cinnamon-roll-gallery{
     display: block;
 }
 
+/* Double Chocolate Cinnamon Roll Product Positioning*/
 .double-chocolate-cinnamon-roll-gallery{
     display: block;
 }
 
+/* Strawberry Cinnamon Roll Product Positioning*/
 .strawberry-cinnamon-roll-gallery{
     display: block;
 }
@@ -198,6 +202,7 @@ img{
     width: 400px;
 }
 
+/* Contents of detail page below heading */
 .detail-page{
     margin-bottom: 60px;
 }
@@ -217,7 +222,7 @@ img{
     
 }
 
-/* Appearance of description that appears underneath image on detail page */
+/* Description of Product pictured on detail page */
 .detail-description{
     display:block;
     font-size: 20px;
@@ -244,7 +249,6 @@ img{
 .selectors{
     display:block;
     width: 200px;
- 
 }
 
 /*"Glazing" title for drop down menu */
@@ -399,21 +403,22 @@ img{
     width: 100%;
 }
 
+/* Comprised of the shopping line, final total, and checkout button */
 .shopping-final-elements{
     display: block;
 }
 
-.shoppers{
+/* Comprises the word "total" and the final cost of items in the cart */
+.final-total{
     display: flex;
     margin: auto;
     font-size: 25px;
     gap: 372px;
     margin-top: 20px;
     margin-bottom: 30px;
-
 }
 
-/* Prices of in-cart items*/
+/* Prices of individual in-cart items*/
 .shopping-price{
     font-size: 25px;
     margin: auto;
