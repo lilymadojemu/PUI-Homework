@@ -328,37 +328,47 @@ img{
 
 /* Heading of the shopping cart page */
 #shopping-heading{
-    margin-left: 5px;
     font-size: 20px;
     font-weight: lighter;
-    margin-top: 5px;
-    padding:20px; 
+    padding:15px; 
     width: 150px;
 }
 
+/* Refers to entire area of shopping cart page below its heading */
 .shopping-content{
     display:flex;
     width: 50%;
 }
 
+/* Content that is on the right side of the overall shopping cart page */
 .right-shopping{
-    display: block;
+
+    /* display: block;
     align-self: flex-end;
     margin-left: 500px;
-    flex-shrink: 0;
-
+    flex-shrink: 0; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 75%;
+    margin-right: 88%;
 }
 
+/* Concerns Information about Original Cinnamon Roll Cart Row */
 .OG-cinnamon-roll-cart{
     display: flex;
+    width: 300px;
+    margin-right: 100%;
+
 }
 
+/* Concerns Information about Double Chocolate Cinnamon Roll Cart Row  */
 .DC-cinnamon-roll-cart{
     display: flex;
     margin: auto;
+    margin-right: 40%;
     margin-top: 30px;
-    margin-bottom: 100px;
-    width: 100%;
+    margin-bottom: 5%;
+    width: 300px;
 
 }
 
@@ -386,69 +396,56 @@ img{
 /* description of shopping cart item underneath each picture */
 /* Credits text-align centering:https://www.w3.org/Style/Examples/007/center.en.tmpl */
 .description-shopping-cart{
-    display: inline-block;
+    display: flex;
     font-size: 14px;
     margin: auto;
     height: auto;
-    margin-left: 20px;
-    width: auto;
+    margin-left: 20%;
+    width:auto;
 }
 
 /* line dividing in cart products with the total cost of them */
 #shopping-line {
     background: black;
     margin: auto;
-    height:5px;
+    height: 5px;
     width: 100%;
 }
 
 .shopping-final-elements{
     display: block;
-    /* margin: auto;
-    margin-left: 50px; */
+    font-size: 20px;
 }
 
 .shoppers{
     display: flex;
     margin: auto;
-    font-weight: bold;
-    gap: 600px;
     margin-top: 20px;
     margin-bottom: 30px;
-
 }
 
 /* prices displayed underneath the pics in the shopping */
 .shopping-price{
-    font-size: 14px;
-    float: right;
+    font-size: 20px;
     margin: auto;
-    flex-grow: 2;    
-    /* margin-left: 300px; */
     margin-bottom: 30px;
-    width: auto; 
+    margin-left: 50%;
 }
 
 /* Total and price from the items in the shopping cart */
 .shopping-total{
     margin: auto;
+    margin-left: 20%;
 
-}
-
-.shopping-total-price{
-    align-self: stretch;
-    
 }
 
 /* Checkout Button */
 #checkout-button{
-    align-self: flex-end;
     background-color: yellow;
-    font-size: 20px;
     font-weight: bold;
     border: 2px solid black;
     margin: auto;
-    margin-left: 500px;
+    margin-left: 660px;
     margin-bottom:100px;
     width: fit-content;
 }
