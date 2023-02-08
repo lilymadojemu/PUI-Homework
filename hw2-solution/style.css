@@ -25,7 +25,6 @@
     border-width: 3px;
     border-style: solid;
     border-color: black;
-    /* margin:auto; */
     margin-top: 50px;
     height:auto;
     margin:0 auto;
@@ -118,6 +117,8 @@ body{
 /* Row at bottom of gallery page consisting of 3 products */
 .bottom-row{
     display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
     gap:50px;
 }
 
@@ -131,7 +132,7 @@ body{
 /* Appearance of the prices of each bakery items picture on first/product gallery page */
 .price-product-gallery{
     margin: auto;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     width: 200px;
 }
 
@@ -154,17 +155,21 @@ body{
     display: block;
 }
 
+.OG-cinnamon-roll-gallery img:active {
+    background-color: yellow;
+    border: 1px solid black;
+    margin: auto;
+}
+
 img{
     object-fit: contain;
 }
 
 /* Original Cinnamon roll pic and text highlight properties*/
 .OG-cinnamon-roll-gallery:active{
-    display:inline-block;
-    background: yellow;
+    background-color: yellow;
     cursor: pointer;
     font-weight: bold;
-    margin:auto;
 }
 
 .apple-cinnamon-roll-gallery{
