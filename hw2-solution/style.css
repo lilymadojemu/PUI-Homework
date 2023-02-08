@@ -381,7 +381,6 @@ img{
     margin: auto;
     margin-top: 1px;
     text-decoration: underline gray;
-    width: 30px;
 }
 
 /* description of shopping cart item underneath each picture */
@@ -412,42 +411,44 @@ img{
 .shoppers{
     display: flex;
     margin: auto;
-    margin-left: 50px;
+    font-weight: bold;
+    gap: 600px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 
 }
 
 /* prices displayed underneath the pics in the shopping */
 .shopping-price{
     font-size: 14px;
+    float: right;
     margin: auto;
     flex-grow: 2;    
-    margin-left: 300px;
+    /* margin-left: 300px; */
     margin-bottom: 30px;
     width: auto; 
 }
 
 /* Total and price from the items in the shopping cart */
 .shopping-total{
-    display:inline-block;
-    font-size: 14px;
     margin: auto;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    width: 100%;
+
 }
 
-#shopping-total-price{
-    display: inline-block;
-    align-self: flex-end;
+.shopping-total-price{
+    align-self: stretch;
+    
 }
 
 /* Checkout Button */
 #checkout-button{
     align-self: flex-end;
     background-color: yellow;
-    display:block;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
     margin: auto;
+    margin-left: 500px;
     margin-bottom:100px;
     width: fit-content;
 }
