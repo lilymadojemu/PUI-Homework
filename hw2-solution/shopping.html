@@ -21,8 +21,8 @@
                 <div class="right-page">
                     <!-- PRODUCTS and CART links to go to the gallery or shopping cart pages respectively-->
                     <div class="top-page-links">
-                        <a href="index.html"><h4 id="PRODUCTS-shopping">PRODUCTS</h4></a>
-                        <a href="shopping.html"><h4 id="CART-shopping">CART</h4></a>
+                        <a href="index.html"><span id="PRODUCTS-shopping">PRODUCTS</span></a>
+                        <a href="shopping.html"><span id="CART-shopping">CART</span></a>
                     </div> 
                     <!--Line to divide bakery logo at top of page from the rest of gallery content-->
                     <div class="line"></div>
@@ -36,80 +36,76 @@
 
                 <div class="right-shopping">
 
-                    <div class="in-cart-items">
-                            <div class="OG-cinnamon-roll-cart">
 
-                                <div class="pic+remove">
-                                    <!-- Image of Original Cinnamon Roll-->
-                                    <img class="shopping-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
-                                    
-                                    <!-- "remove" that appears below the Original Cinnamon Roll-->
-                                    <p class="remove">Remove</p>
+                    <div class="OG-cinnamon-roll-cart">
 
-                                </div>
-
-                                <!-- Description of the Original Cinnamon Roll in the cart to include its name, glazing type, and pack size -->
-                                <div class="description-shopping-cart">
-                                    <p>Original Cinnamon roll  
-                                    <br>Glazing: Keep Original 
-                                    <br>Pack Size: 1</p>
-                                </div>
-                                
-                                <!-- Price of the Original Cinnamon Roll -->
-                                <p class="shopping-price"> 
-                                    $2.49
-                                </p>
+                        <div class="pic+remove">
+                            <!-- Image of Original Cinnamon Roll-->
+                            <img class="shopping-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
                             
-                            </div>
+                            <!-- "remove" that appears below the Original Cinnamon Roll-->
+                            <p class="remove">Remove</p>
 
-                        <div class="DC-cinnamon-roll-cart">
-
-                            <div class="pic+remove">
-                                <!-- Image of Double Chocolate Cinnamon Roll-->
-                                <img class="shopping-pics" src="bakery_products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate cinnamon roll">
-                                
-                                <!-- "remove" that appears below the Double Chocolate Cinnamon Roll-->
-                                <p class="remove">Remove</p>  
-                            </div>
-                            
-
-                            <!-- Description of the Double Chocolate CInnamon Roll in the cart to include its name, glazing type, and pack size -->
-                            <div class="description-shopping-cart">
-                                <p>Double Chocolate Cinnamon Roll 
-                                <br>Glazing: Sugar Milk 
-                                <br> Pack Size: 6</p>
-                            </div>
-
-                            <!-- Price of Double Chocolate Cinnamon Roll -->
-                            <p class="shopping-price"> 
-                                $27.45
-                            </p>
                         </div>
+
+                        <!-- Description of the Original Cinnamon Roll in the cart to include its name, glazing type, and pack size -->
+                        <div class="description-shopping-cart">
+                            <p>Original Cinnamon roll  
+                            <br>Glazing: Keep Original 
+                            <br>Pack Size: 1</p>
+                        </div>
+                        
+                        <!-- Price of the Original Cinnamon Roll -->
+                        <p class="shopping-price"> 
+                            $2.49
+                        </p>
+                    </div>
+
+                <div class="DC-cinnamon-roll-cart">
+
+                    <div class="pic+remove">
+                        <!-- Image of Double Chocolate Cinnamon Roll-->
+                        <img class="shopping-pics" src="bakery_products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate cinnamon roll">
+                        
+                        <!-- "remove" that appears below the Double Chocolate Cinnamon Roll-->
+                        <p class="remove">Remove</p>  
                     </div>
                     
-                    <!--Line to divide the shopping cart's contents from total price-->
-                    <span id="shopping-line"></span> 
-                        <div class="shopping-final-elements">
-                            <div class="shoppers">
-                                <!-- Total price of items in the shopping cart -->
-                                <span class="shopping-total">Total</span>
-                                
-                                <span class="shopping-total-price"> $29.94</span>
-                                
-                            </div>   
-                            <!-- Button to "checkout" the items in the shopping cart -->
-                            <button id="checkout-button">
-                                Checkout
-                            </button>
 
-                        </div>
-                
+                    <!-- Description of the Double Chocolate CInnamon Roll in the cart to include its name, glazing type, and pack size -->
+                    <div class="description-shopping-cart">
+                        <p>Double Chocolate Cinnamon Roll 
+                        <br>Glazing: Sugar Milk 
+                        <br> Pack Size: 6</p>
+                    </div>
 
+                    <!-- Price of Double Chocolate Cinnamon Roll -->
+                    <p class="shopping-price"> 
+                        $27.45
+                    </p>
+                </div>
+                    
+                    <div class="shopping-final-elements">
+
+                        <!--Line to divide the shopping cart's contents from total price-->
+                        <div id="shopping-line"></div> 
+                        <div class="shoppers">
+                            
+                            <!-- Total price of items in the shopping cart -->
+                            <span class="shopping-total">Total</span>
+                            
+                            <span class="shopping-total-price"> $29.94</span>
+                            
+                        </div>   
+                        <!-- Button to "checkout" the items in the shopping cart -->
+                        <button id="checkout-button">
+                            Checkout
+                        </button>
+
+                    </div>
                 </div>  
             </div>
         </div>
     </body>
 </html>
 
-<!-- credits: 
-    <br> tag: https://blog.hubspot.com/website/html-line-break#:~:text=To%20do%20a%20line%20break%20in%20HTML%2C%20use%20the%20%3Cbr,element%2C%20there's%20no%20closing%20tag -->

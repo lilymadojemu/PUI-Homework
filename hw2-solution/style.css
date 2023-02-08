@@ -328,10 +328,10 @@ img{
 
 /* Heading of the shopping cart page */
 #shopping-heading{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: lighter;
     padding:15px; 
-    width: 150px;
+    width: 200px;
 }
 
 /* Refers to entire area of shopping cart page below its heading */
@@ -342,110 +342,99 @@ img{
 
 /* Content that is on the right side of the overall shopping cart page */
 .right-shopping{
-
-    /* align-self: flex-end;
-    margin-left: 500px;
-    flex-shrink: 0; */ 
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     margin-left: 75%;
+
 }
 
-/* Concerns Information about Original Cinnamon Roll Cart Row */
+/* Cart item description of Original Cinnamon roll */
 .OG-cinnamon-roll-cart{
     display: flex;
-    width: 300px;
-    margin-right: 100%;
-
 }
 
-/* Concerns Information about Double Chocolate Cinnamon Roll Cart Row  */
+/* Cart item description of Double ChocolateCinnamon roll */
 .DC-cinnamon-roll-cart{
     display: flex;
     margin: auto;
-    margin-right: 40%;
     margin-top: 30px;
-    margin-bottom: 5%;
-    width: 300px;
+    margin-bottom: 10px;
+    width: auto;
 
 }
 
 /* Pictures of the items "in cart" */
 .shopping-pics{
     background-color: black;
-    border: 2px solid black;
-    display:block;
-    height:80px;
-    margin-left: auto;
+    border: 3px solid black;
+    height:100px;
     object-fit: cover;
-    width:80px;      
+    width:100px;      
 }
 
 /* "remove" link at the bottom of pictures in the shopping cart*/
 .remove{
     display: block;
-    font-size: 7px;
+    font-size: 9px;
     font-weight: bold;
     margin: auto;
     margin-top: 1px;
     text-decoration: underline gray;
 }
 
-/* description of shopping cart item underneath each picture */
-/* Credits text-align centering:https://www.w3.org/Style/Examples/007/center.en.tmpl */
+/* text description of shopping cart items */
 .description-shopping-cart{
-    display: flex;
-    font-size: 14px;
+    display: inline-block;
+    font-size: 20px;
     margin: auto;
-    height: auto;
-    margin-left: 20%;
-    width:auto;
+    height: fit-content;    
+    margin-left: 5%;
+    width: 350px;
 }
 
 /* line dividing in cart products with the total cost of them */
 #shopping-line {
     background: black;
     margin: auto;
-    height: 5px;
+    height:5px;
     width: 100%;
 }
 
 .shopping-final-elements{
     display: block;
-    font-size: 20px;
 }
 
 .shoppers{
     display: flex;
     margin: auto;
+    font-size: 25px;
+    gap: 372px;
     margin-top: 20px;
     margin-bottom: 30px;
+
 }
 
-/* prices displayed underneath the pics in the shopping */
+/* Prices of in-cart items*/
 .shopping-price{
-    font-size: 20px;
+    font-size: 25px;
     margin: auto;
+    margin-left:30%;
     margin-bottom: 30px;
-    margin-left: 50%;
+    width: 290px; 
 }
 
 /* Total and price from the items in the shopping cart */
 .shopping-total{
-    margin: auto;
     margin-left: 20%;
-
 }
 
 /* Checkout Button */
 #checkout-button{
     background-color: yellow;
+    font-size: 25px;
     font-weight: bold;
-    border: 2px solid black;
+    border: 3px solid black;
     margin: auto;
-    margin-left: 660px;
+    margin-left: 500px;
     margin-bottom:100px;
-    width: fit-content;
+    width: 150px;
 }
-
-
