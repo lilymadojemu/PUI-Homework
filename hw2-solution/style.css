@@ -25,12 +25,18 @@
     border-style: solid;
     border-color: black;
     margin:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
     height:auto;
     max-width: 1200px;
     width: fit-content;
     
 }
-
+a {
+    text-decoration: none;
+    color: black;
+}
 /* Encompases the content at the top of the page that is universal to the gallery, detail, and cart pages */
 .top-page-elements{
     display: flex;
@@ -70,28 +76,14 @@
     margin-top: auto;
 }
 
+.highlight {
+	background-color: yellow;
+	font-weight: bold;
+}
+
 /* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
 /* Removes the underline from PRODUCTS and CART Links */
-a:link{
-    color:black;
-    text-decoration: none;
-}
 
-a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-a:hover{
-    color: black;
-    text-decoration: none;
-}
-
-/* When link has been clicked on*/
-a:active{
-    color: black;
-    text-decoration: none;
-}
 
 /* Font-family of all text on the website */
 body{
@@ -109,7 +101,7 @@ body{
     margin-left: 5px;
     font-weight: lighter;
     padding:20px; 
-    width: 290px;
+    width: auto;
 }
 /* All displayed products and their names & prices */
 .bakery-products{
@@ -208,6 +200,7 @@ img{
 }
 
 .detail-page{
+    display: flex;
     margin-bottom: 60px;
 }
 /* Container for content of detail page */
@@ -352,42 +345,46 @@ img{
 }
 
 .shopping-content{
-    display:block;
+    display:flex;
+    align-content: flex-end;
+    gap: 50px;
 }
 
 .right-shopping{
+    flex-grow: 1;
     display: block;
-    margin-left: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+    width: 50%;
+
 }
 
 .OG-cinnamon-roll-cart{
     display: flex;
-    margin-bottom: 100px;
 
 }
 
 .DC-cinnamon-roll-cart{
     display: flex;
+    margin: auto;
+    margin-top: 30px;
     margin-bottom: 100px;
-
+    width: auto;
 
 }
 
 .shopping-final-elements{
-    display: flex;
     margin-top: 100px;
 }
 
 /* Pictures of the items "in cart" */
 .shopping-pics{
     background-color: black;
-    box-sizing: border-box;
+    border: 2px solid black;
     display:block;
     height:80px;
-    margin-left: auto;
-    margin-right: auto;
     object-fit: cover;
-    padding:2px;
     width:80px;      
 }
 
@@ -405,25 +402,24 @@ img{
 /* description of shopping cart item underneath each picture */
 /* Credits text-align centering:https://www.w3.org/Style/Examples/007/center.en.tmpl */
 .description-shopping-cart{
-    display:block;
     font-size: 14px;
     margin: auto;
-    text-align: center;
-    width: fit-content;
+    width: auto;
 }
 
 /* line dividing in cart products with the total cost of them */
 #shopping-line {
     background: black;
     height:2px;
-    margin-left: auto;
-    margin-right: auto;
     width: auto;
+}
+
+.shopping-final-elements{
+    margin-left: 50px;
 }
 
 /* prices displayed underneath the pics in the shopping */
 .shopping-price{
-    display:block;
     font-size: 14px;
     margin: auto;
     margin-bottom: 30px;
