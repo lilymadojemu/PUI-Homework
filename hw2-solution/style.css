@@ -75,11 +75,6 @@ a {
     margin-top: auto;
 }
 
-.highlight {
-	background-color: yellow;
-	font-weight: bold;
-}
-
 /* credits: CSS Links Styling: https://www.w3schools.com/css/css_link.asp  */
 /* Removes the underline from PRODUCTS and CART Links */
 
@@ -343,22 +338,19 @@ img{
 
 .shopping-content{
     display:flex;
-    align-content: flex-end;
+    width: 50%;
 }
 
 .right-shopping{
-    align-self: flex-end;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: max-content;
-    width: 100%;
+    align-self: flex-end;
+    margin-left: 500px;
+    flex-shrink: 0;
 
 }
 
 .OG-cinnamon-roll-cart{
     display: flex;
-
 }
 
 .DC-cinnamon-roll-cart{
@@ -366,7 +358,7 @@ img{
     margin: auto;
     margin-top: 30px;
     margin-bottom: 100px;
-    width: auto;
+    width: 100%;
 
 }
 
@@ -376,6 +368,7 @@ img{
     border: 2px solid black;
     display:block;
     height:80px;
+    margin-left: auto;
     object-fit: cover;
     width:80px;      
 }
@@ -397,6 +390,7 @@ img{
     display: inline-block;
     font-size: 14px;
     margin: auto;
+    height: auto;
     margin-left: 20px;
     width: auto;
 }
@@ -404,36 +398,52 @@ img{
 /* line dividing in cart products with the total cost of them */
 #shopping-line {
     background: black;
-    height:2px;
+    margin: auto;
+    height:5px;
     width: 100%;
 }
 
 .shopping-final-elements{
+    display: block;
+    /* margin: auto;
+    margin-left: 50px; */
+}
+
+.shoppers{
+    display: flex;
     margin: auto;
     margin-left: 50px;
+
 }
 
 /* prices displayed underneath the pics in the shopping */
 .shopping-price{
-    display: inline-flex;
     font-size: 14px;
     margin: auto;
+    flex-grow: 2;    
+    margin-left: 300px;
     margin-bottom: 30px;
-    margin-top: 1px;
-    width: 40px; 
+    width: auto; 
 }
 
 /* Total and price from the items in the shopping cart */
 .shopping-total{
+    display:inline-block;
     font-size: 14px;
     margin: auto;
     margin-bottom: 10px;
     margin-top: 20px;
-    width: 90px;
+    width: 100%;
+}
+
+#shopping-total-price{
+    display: inline-block;
+    align-self: flex-end;
 }
 
 /* Checkout Button */
 #checkout-button{
+    align-self: flex-end;
     background-color: yellow;
     display:block;
     font-size: 14px;
