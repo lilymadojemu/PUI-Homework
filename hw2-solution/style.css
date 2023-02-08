@@ -187,7 +187,6 @@ img{
     display: block;
 }
 
-
 /* Shopping Detail Page */
 
 /* Heading for detail page, adjusted for width compared to other pages */
@@ -202,18 +201,13 @@ img{
 .detail-page{
     margin-bottom: 60px;
 }
+
 /* Container for content of detail page */
 .detail-content{
     display:flex;
     justify-content: center;
     gap: 50px;
 }
-/* Left side of detail page */
-/* .left-detail{
-    margin: auto;
-    flex-grow: 2;
-    width: fit-content;
-} */
 
 /* Right side of detail page */
 .right-detail{
@@ -250,7 +244,7 @@ img{
 .selectors{
     display:block;
     width: 200px;
-    
+ 
 }
 
 /*"Glazing" title for drop down menu */
@@ -345,16 +339,15 @@ img{
 .shopping-content{
     display:flex;
     align-content: flex-end;
-    gap: 50px;
 }
 
 .right-shopping{
-    flex-grow: 1;
+    align-self: flex-end;
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: max-content;
-    width: 50%;
+    width: 100%;
 
 }
 
@@ -370,10 +363,6 @@ img{
     margin-bottom: 100px;
     width: auto;
 
-}
-
-.shopping-final-elements{
-    margin-top: 100px;
 }
 
 /* Pictures of the items "in cart" */
@@ -400,8 +389,10 @@ img{
 /* description of shopping cart item underneath each picture */
 /* Credits text-align centering:https://www.w3.org/Style/Examples/007/center.en.tmpl */
 .description-shopping-cart{
+    display: inline-block;
     font-size: 14px;
     margin: auto;
+    margin-left: 20px;
     width: auto;
 }
 
@@ -409,7 +400,7 @@ img{
 #shopping-line {
     background: black;
     height:2px;
-    width: auto;
+    width: 100%;
 }
 
 .shopping-final-elements{
@@ -419,6 +410,7 @@ img{
 
 /* prices displayed underneath the pics in the shopping */
 .shopping-price{
+    display: inline-flex;
     font-size: 14px;
     margin: auto;
     margin-bottom: 30px;
@@ -428,7 +420,6 @@ img{
 
 /* Total and price from the items in the shopping cart */
 .shopping-total{
-    display:block;
     font-size: 14px;
     margin: auto;
     margin-bottom: 10px;
@@ -443,7 +434,7 @@ img{
     font-size: 14px;
     margin: auto;
     margin-bottom:100px;
-    width: 100px;
+    width: fit-content;
 }
 
 
