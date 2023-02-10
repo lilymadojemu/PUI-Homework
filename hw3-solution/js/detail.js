@@ -16,3 +16,43 @@ const pack_size_options = {
     six: 5,
     twelve: 10,
 }
+
+// Array of glazings and their price adaptions that will appear in pack size drop down menu
+let all_glazing = [
+    { 
+        glazing_name: 'Keep Original',
+        price_adaption: '0',
+    },
+    { 
+        glazing_name: 'Sugar milk',
+        price_adaption: '0',
+    },
+    { 
+        glazing_name: 'Vanilla milk',
+        price_adaption: '0.50',
+    },
+    { 
+        glazing_name: 'Double Chocolate',
+        price_adaption: '1.50',
+    }
+];
+
+// Array of pack sizes and their price adaptions that will appear in pack size drop down menu
+let all_pack_size = [
+    { 
+        pack_size_name: '1',
+        price_adaption: '1',
+    },
+    { 
+        pack_size_name: '3',
+        price_adaption: '3',
+    },
+    { 
+        pack_size_name: '6',
+        price_adaption: '5',
+    },
+    { 
+        pack_size_name: '12',
+        price_adaption: '10',
+    }
+]; 
