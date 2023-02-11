@@ -1,12 +1,12 @@
 console.log('Welcome to the detail page');
 
-// Glazing Options
-const glazing_options = {
-    Keeporiginal: 0,
-    Sugarmilk: 0,
-    Vanillamilk: 0.50,
-    Doublechocolate: 1.50,
-}
+// Glazing Options Object
+// const glazing_options = {
+//     Keeporiginal: 0,
+//     Sugarmilk: 0,
+//     Vanillamilk: 0.50,
+//     Doublechocolate: 1.50,
+// }
 
 // Pack Size Options
 const pack_size_options = {
@@ -18,6 +18,7 @@ const pack_size_options = {
 
 // Array of glazings and their price adaptions that will appear in pack size drop down menu
  let all_glazing = [
+        // All possible options that will be dynamically added to this array:
 //     // { 
 //     //     glazing_name: 'Keep Original',
 //     //     price_adaption: '0',
@@ -38,6 +39,7 @@ const pack_size_options = {
 
 // Array of pack sizes and their price adaptions that will appear in pack size drop down menu
 let all_pack_size = [
+    // All possible options that will be dynamically added to this array
     // { 
     //     pack_size_name: '1',
     //     price_adaption: '1',
@@ -64,15 +66,13 @@ let packSizeSelectElement = document.querySelector('#pack-size-selector')
 
 // Add a new glazing to the drop down menu
 // I believe here I could use a loop to populate drop down for each item
-for (let i = 0; i < all_glazing.length; i++)
-{
+for (let i = 0; i < all_glazing.length; i++) {
     let glazing_options = {
         Keeporiginal: 0,
         Sugarmilk: 0,
         Vanillamilk: 0.50,
         Doublechocolate: 1.50,
     }
-      
     // let all_glazing = []
 
     all_glazing.push(glazing_options)
@@ -81,8 +81,7 @@ for (let i = 0; i < all_glazing.length; i++)
 
 }
 
-
-
+// Add each pack size to the drop down menu
 // for (){
 //     console.log('A pack size has been added')
 //     let newPackSize = {
@@ -106,5 +105,4 @@ glazingSelectElement.addEventListener('change', onSelectValueChange);
 packSizeSelectElement.addEventListener('change', onSelectValueChange);
 
 // If array is drop down options, 
-
 
