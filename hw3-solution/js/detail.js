@@ -66,7 +66,8 @@ let packSizeSelectElement = document.querySelector('#pack-size-selector')
 
 // Add a new glazing to the drop down menu
 // I believe here I could use a loop to populate drop down for each item
-for (let i = 0; i < all_glazing.length; i++) {
+for (let i = 0; i < all_glazing.length; i++)
+{
     let glazing_options = {
         Keeporiginal: 0,
         Sugarmilk: 0,
