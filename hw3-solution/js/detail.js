@@ -1,24 +1,7 @@
 console.log('Welcome to the detail page');
 
-// Glazing Options Object
-// const glazing_options = {
-//     Keeporiginal: 0,
-//     Sugarmilk: 0,
-//     Vanillamilk: 0.50,
-//     Doublechocolate: 1.50,
-// }
-
-// Pack Size Options
-const pack_size_options = {
-    one: 1,
-    three: 3,
-    six: 5,
-    twelve: 10,
-}
-
 // Array of glazings and their price adaptions that will appear in pack size drop down menu
  let all_glazing = [
-        // All possible options that will be dynamically added to this array:
 //     // { 
 //     //     glazing_name: 'Keep Original',
 //     //     price_adaption: '0',
@@ -36,6 +19,68 @@ const pack_size_options = {
 //     //     price_adaption: '1.50',
 //     // }
 ];
+
+// Retrieving the drop down menu for glazing
+let glazingSelectElement = document.querySelector('#glazing-selector')
+
+// First Glazing Option: Keep Original
+let glazing_option_1 = {
+    option_name:'Keep Original',
+    option_value: '0',
+}
+
+all_glazing.push(glazing_option_1)
+
+// Creating each option in the drop down menu in the UI
+var option = document.createElement('option');
+option.text = glazing_option_1.option_name;
+option.value = all_glazing.length - 1;
+glazingSelectElement.add(option);
+
+
+// Second Glazing Option: Sugar Milk
+let glazing_option_two = {
+    option_name: 'Sugar Milk',
+    option_value: '0',
+}
+
+all_glazing.push(glazing_option_two)
+
+// Creating each option in the drop down menu in the UI
+var option = document.createElement('option');
+option.text = glazing_option_1.option_name;
+option.value = all_glazing.length - 1;
+glazingSelectElement.add(option);
+
+// Second Glazing Option: Sugar Milk
+let glazing_option_3 = {
+    option_name: 'Sugar Milk',
+    option_value: '0',
+}
+
+all_glazing.push(glazing_option_3)
+
+// Creating each option in the drop down menu in the UI
+var option = document.createElement('option');
+option.text = glazing_option_1.option_name;
+option.value = all_glazing.length - 1;
+glazingSelectElement.add(option);
+
+// Second Glazing Option: Sugar Milk
+let glazing_option_4 = {
+    option_name: 'Sugar Milk',
+    option_value: '0',
+}
+
+all_glazing.push(glazing_option_4)
+
+// Creating each option in the drop down menu in the UI
+var option = document.createElement('option');
+option.text = glazing_option_1.option_name;
+option.value = all_glazing.length - 1;
+glazingSelectElement.add(option);
+
+
 
 // Array of pack sizes and their price adaptions that will appear in pack size drop down menu
 let all_pack_size = [
@@ -58,8 +103,7 @@ let all_pack_size = [
     // }
 ]; 
 
-// Retrieving the drop down menu for glazing
-let glazingSelectElement = document.querySelector('#glazing-selector')
+
 
 // Retrieving the drop down menu for pack size
 let packSizeSelectElement = document.querySelector('#pack-size-selector')
@@ -82,26 +126,7 @@ for (let i = 0; i < all_glazing.length; i++)
 
 }
 
-// First Glazing Option: Keep Original
-let glazing_option_1 = {
-    option_name:'Keep Original',
-    option_value: '0',
-}
 
-all_glazing.push(glazing_option_1)
-
-// Creating each option in the drop down menu in the UI
-var option = document.createElement('option');
-option.text = glazing_option_1.option_name;
-option.value = all_glazing.length - 1;
-glazingSelectElement.add(option);
-
-
-// Second Glazing Option: Sugar Milk
-let glazing_option_2 = {
-    option_name: 'Sugar Milk',
-    option_value: '0',
-}
 // Pack Size Options
 
 
