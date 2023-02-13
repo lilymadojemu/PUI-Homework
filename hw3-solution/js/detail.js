@@ -70,6 +70,13 @@ function glazingOnSelectValueChange() {
 
 glazingSelectElement.addEventListener('change', glazingOnSelectValueChange);
 
+function glazingChange(element) {
+    // get the value (price adaption) of selected element
+    const priceChange = element.value;
+
+    // update the price
+}
+
 // Array of pack sizes and their price adaptions that will appear in pack size drop down menu
 let all_pack_size = [
 ]; 
@@ -136,4 +143,12 @@ function packSizeOnSelectValueChange() {
 
 packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
 
+function packSizeChange(element) {
+    // get the value (price adaption) of selected element
+    const priceChange = element.value;
+}
 
+// update the price
+function updatePrice (){
+    const productDetailPrice = document.querySelector('.detail-price');
+}
