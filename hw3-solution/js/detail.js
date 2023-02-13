@@ -4,14 +4,6 @@ console.log('Welcome to the detail page');
  let all_glazing = [
 ];
 
-// function displayGlazing(glaze) {
-//     let carTitleElement = document.querySelector('#car-title');
-//     let carInfoElement = document.querySelector('#car-info');
-  
-//     carTitleElement.innerText = car.model;
-//     carInfoElement.innerText = car.description;
-//   }
-
 // Retrieving the drop down menu for glazing
 let glazingSelectElement = document.querySelector('#glazing-selector')
 
@@ -74,14 +66,6 @@ glazingSelectElement.add(option);
 
 function glazingOnSelectValueChange() {
     console.log('You selected' + this.value);
-
-    let glazingIndex = parseInt(this.value);
-    
-    console.log(glazingIndex)
-    let glazingToDisplay = all_glazing[glazingIndex];
-
-
-    displayGlazing(glazingToDisplay);
 }
 
 glazingSelectElement.addEventListener('change', glazingOnSelectValueChange);
@@ -89,14 +73,6 @@ glazingSelectElement.addEventListener('change', glazingOnSelectValueChange);
 // Array of pack sizes and their price adaptions that will appear in pack size drop down menu
 let all_pack_size = [
 ]; 
-
-// function displayPackSize(pack_size) {
-//     let packSizeTitleElement = document.querySelector('#car-title');
-//     let carInfoElement = document.querySelector('#car-info');
-  
-//     carTitleElement.innerText = car.model;
-//     carInfoElement.innerText = car.description;
-//   }
 
 // Retrieving the drop down menu for pack size
 let packSizeSelectElement = document.querySelector('#pack-size-selector')
@@ -156,14 +132,6 @@ packSizeSelectElement.add(option);
 
 function packSizeOnSelectValueChange() {
     console.log('You selected ' + this.value);
-
-    let packSizeIndex = parseInt(this.value);
-
-    console.log(packSizeIndex)
-    let packSizeToDisplay = all_pack_size[packSizeIndex];
-
-
-    displayPackSize(packSizeToDisplay);
 }
 
 packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
