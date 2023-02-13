@@ -76,9 +76,9 @@ function glazingOnSelectValueChange() {
     console.log('You selected' + this.value);
 
     console.log(glazingIndex)
-    let glazingIndex = all_glazing[glazingIndex];
+    let glazingIndex = parseInt(this.value);
+    let glazingToDisplay = all_glazing[glazingIndex];
 
-    let glazingToDisplay = parseInt(this.value);
 
     displayGlazing(glazingToDisplay);
 }
@@ -157,9 +157,9 @@ function packSizeOnSelectValueChange() {
     console.log('You selected ' + this.value);
     console.log(packSizeIndex)
 
-    let packSizeIndex = all_pack_size[packSizeIndex];
+    let packSizeIndex = parseInt(this.value);
+    let packSizeToDisplay = all_pack_size[packSizeIndex];
 
-    let packSizeToDisplay = parseInt(this.value);
 
     displayPackSize(packSizeToDisplay);
 }
