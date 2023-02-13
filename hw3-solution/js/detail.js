@@ -75,8 +75,9 @@ glazingSelectElement.add(option);
 function glazingOnSelectValueChange() {
     console.log('You selected' + this.value);
 
-    console.log(glazingIndex)
     let glazingIndex = parseInt(this.value);
+    
+    console.log(glazingIndex)
     let glazingToDisplay = all_glazing[glazingIndex];
 
 
@@ -155,9 +156,10 @@ packSizeSelectElement.add(option);
 
 function packSizeOnSelectValueChange() {
     console.log('You selected ' + this.value);
-    console.log(packSizeIndex)
 
     let packSizeIndex = parseInt(this.value);
+
+    console.log(packSizeIndex)
     let packSizeToDisplay = all_pack_size[packSizeIndex];
 
 
