@@ -1,3 +1,19 @@
+// Object for glazings
+const glazingOptions = {
+    'Keep Original':0.0,
+    'Sugar Milk': 0.0,
+    'Vanilla Milk':0.50,
+    'Double Chocolate':1.50,
+}
+
+// Object for pack sizes
+const packSizeOptions = {
+    '1':1.0,
+    '3':3.0,
+    '6':5.0,
+    '12':10.0,
+}
+
 // Array of glazings and their price adaptions that will appear in pack size drop down menu
  let all_glazing = [
 ];
