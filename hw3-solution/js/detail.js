@@ -1,5 +1,3 @@
-console.log('Welcome to the detail page');
-
 // Array of glazings and their price adaptions that will appear in pack size drop down menu
  let all_glazing = [
 ];
@@ -142,7 +140,7 @@ packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
 function glazingChange(element) {
     // get the value (price adaption) of selected element
     const priceChange = element.value;
-    return priceChange
+    return priceChange;
 }
 
 function packSizeChange(element) {
@@ -150,9 +148,11 @@ function packSizeChange(element) {
     const packPrice = element.value;
     // update the final price
     const basePrice = '2.49';
-    const finalPrice = parseInt(basePrice + glazingChange(element)) * packPrice;
+    console.log(glazingChange(element));
+    console.log(packPrice);
+    const finalPrice = (parseInt(basePrice + glazingChange(element)) * packPrice);
     const productDetailPrice = document.querySelector('.detail-price');
-    console.log(' The current final price of this product is ' + finalPrice)
+    console.log(' The current final price of this product is ' + finalPrice);
     productDetailPrice.innerText = finalPrice;
 
 }
