@@ -2,23 +2,17 @@
 const glazingOptions = {
     'Keep Original':0.0,
     'Sugar Milk': 0.0,
-    'Vanilla Milk':0.50,
-    'Double Chocolate':1.50,
+    'Vanilla Milk': 0.50,
+    'Double Chocolate': 1.50,
 };
 
 // Object for pack sizes
 const packSizeOptions = {
-    '1':1.0,
-    '3':3.0,
-    '6':5.0,
-    '12':10.0,
+    '1': 1.0,
+    '3': 3.0,
+    '6': 5.0,
+    '12': 10.0,
 };
-
-// Default Price of the selected glazing option
-var glazingPrice = '0';
-
-// Default Price of the selected pack size option
-var packPrice = '0';
 
 // Array of glazings and their price adaptions that will appear in pack size drop down menu
  let all_glazing = [];
@@ -35,13 +29,12 @@ for (i in glazingOptions) {
     var option = document.createElement('option');
     option.text = i;
     option.value = glazingOptions[i]; 
-    console.log(glazingOptions[i]);
     glazingSelectElement.appendChild(option);
 }
 
 // Change in drop down menu for glazing option selected based on user's input
 function glazingOnSelectValueChange() {
-    console.log('You selected ' + this.value); 
+    console.log('This glazing option value is ' + this.value); 
 };
 
 // Looking/listening for user's selection on the glazing drop down menu
@@ -56,21 +49,26 @@ for (i in packSizeOptions) {
     var option = document.createElement('option');
     option.text = i;
     option.value = packSizeOptions[i]; 
-    console.log(packSizeOptions[i]);
     packSizeSelectElement.add(option);
 }
 
 // Change in drop down menu for pack size option selected based on user's input
 function packSizeOnSelectValueChange() {
-    console.log('You selected ' + this.value);
+    console.log('This pack size option value is ' + this.value);
 }
 
 // Looking/listening for user's selection on the pack size drop down menu 
 packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
 
+// Default Price of the selected glazing option
+var glazingPrice = '0';
+
+// Default Price of the selected pack size option
+var packPrice = '0';
+
 // Get's the current glazing option's price and change's the final price based on user's selection
 function glazingChange(element) {
-    glazingPrice = parseInt(element.value);
+    glazingPrice = parseFloat(element.value);
     calculatePrice();
 }
 
