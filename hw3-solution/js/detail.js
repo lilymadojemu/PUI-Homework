@@ -4,7 +4,7 @@ const glazingOptions = {
     'Sugar Milk': 0.0,
     'Vanilla Milk':0.50,
     'Double Chocolate':1.50,
-}
+};
 
 // Object for pack sizes
 const packSizeOptions = {
@@ -12,7 +12,7 @@ const packSizeOptions = {
     '3':3.0,
     '6':5.0,
     '12':10.0,
-}
+};
 
 // Default Price of the selected glazing option
 var glazingPrice = '0';
@@ -42,7 +42,7 @@ for (i in glazingOptions) {
 // Change in drop down menu for glazing option selected based on user's input
 function glazingOnSelectValueChange() {
     console.log('You selected ' + this.value); 
-}
+};
 
 // Looking/listening for user's selection on the glazing drop down menu
 glazingSelectElement.addEventListener('change', glazingOnSelectValueChange);
