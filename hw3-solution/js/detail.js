@@ -28,12 +28,16 @@ for (i in glazingOptions) {
     all_glazing.push(i);
     var option = document.createElement('option');
     option.text = i;
-    glazingSelectElement.add(option);
+    option.value = glazingOptions[i]; 
+    console.log(glazingOptions[i]);
+    glazingSelectElement.appendChild(option);
 }
 
 // When select element changes, the final price is recalculated
 function glazingOnSelectValueChange() {
-    console.log('You selected ' + this.value);
+    // Shows correct value
+    console.log('You selected ' + this.value); 
+    var glazingPrice = this.value;
     // calculatePrice();
 }
 
@@ -48,38 +52,39 @@ for (i in packSizeOptions) {
     all_pack_size.push(i);
     var option = document.createElement('option');
     option.text = i;
+    option.value = packSizeOptions[i]; 
+    console.log(packSizeOptions[i]);
     packSizeSelectElement.add(option);
 }
 
 function packSizeOnSelectValueChange() {
     console.log('You selected ' + this.value);
+    // calculate(price);
 }
 
 packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
 
-
 function glazingChange(element) {
     // get the value (price adaption) of selected element
-    const priceChange = element.value;
-    return priceChange;
-    calculatePrice(glazingPrice, packPrice);
-
+    var glazingPrice = parseInt(element.value);
+    console.log('This is the current glazing value ' + glazingPrice);
+    // let answer = '2.49' + glazingPrice;
+    // console.log(answer);
 }
 
-var glazingPrice = glazingChange(element)
-console.log('Your glazing price is ' + glazingPrice)
-
-function packSizeChange(element) {
+function packSizeChange(element) {    
     // get the value (price adaption) of selected element
-    console.log(this.element);
-    const packPrice = element.value;
-    // update the final price
-    calculatePrice(glazingPrice, packPrice);
-}
-var packSizePrice = packSizeChange(element)
-console.log('Your pack size price is ' + packSizePrice)
+    const packPrice = parseInt(element.value);
+    console.log('This is the current pack size value ' + packPrice);
 
-function calculatePrice(glazingPrice, packSizePrice) {
+    // console.log(this.element);
+    // console.log('Your pack size price is ' + packPrice);
+
+    // // update the final price
+    // calculatePrice(glazingPrice, packPrice);
+}
+
+function calculatePrice() {
     // Select what the current glazing option is and get it's value
     // Select what the current pack size option is and get it's value
     // Use the formula and change the inner text of product detail's price
@@ -87,9 +92,7 @@ function calculatePrice(glazingPrice, packSizePrice) {
     console.log(glazingChange(element));
     console.log(packPrice);
     const finalPrice = (parseInt(basePrice + glazingChange(element)) * packPrice);
-    const productDetailPrice = document.querySelector('.detail-price');
-    console.log(' The current final price of this product is ' + finalPrice);
-    productDetailPrice.innerText = finalPrice;
+
 
 
 }
@@ -98,6 +101,8 @@ function updatePrice() {
     // Select what the current glazing option is and get it's value
     // Select what the current pack size option is and get it's value
     // Use the formula and change the inner text of product detail's price
-
+    const productDetailPrice = document.querySelector('.detail-price');
+    console.log(' The current final price of this product is ' + finalPrice);
+    productDetailPrice.innerText = finalPrice;
 
 }
