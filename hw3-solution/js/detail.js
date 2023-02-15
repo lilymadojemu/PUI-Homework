@@ -27,7 +27,7 @@ var packPrice = '0';
 let all_pack_size = []; 
 
 // Accessing the glazing options' drop down menu
-let glazingSelectElement = document.querySelector('#glazing-selector')
+let glazingSelectElement = document.querySelector('#glazing-selector');
 
 // For loop that adds glazing options to glazing drop down menu
 for (i in glazingOptions) {
