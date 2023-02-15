@@ -35,10 +35,7 @@ for (i in glazingOptions) {
 
 // When select element changes, the final price is recalculated
 function glazingOnSelectValueChange() {
-    // Shows correct value
     console.log('You selected ' + this.value); 
-    var glazingPrice = this.value;
-    // calculatePrice();
 }
 
 // Looking/listening for user's selection on the drop down menu
@@ -59,50 +56,33 @@ for (i in packSizeOptions) {
 
 function packSizeOnSelectValueChange() {
     console.log('You selected ' + this.value);
-    // calculate(price);
 }
 
 packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
 
-function glazingChange(element) {
+function glazingChange() {
     // get the value (price adaption) of selected element
     var glazingPrice = parseInt(element.value);
     console.log('This is the current glazing value ' + glazingPrice);
-    // let answer = '2.49' + glazingPrice;
-    // console.log(answer);
+    calculatePrice();
 }
 
 function packSizeChange(element) {    
     // get the value (price adaption) of selected element
     const packPrice = parseInt(element.value);
     console.log('This is the current pack size value ' + packPrice);
-
-    // console.log(this.element);
-    // console.log('Your pack size price is ' + packPrice);
-
-    // // update the final price
-    // calculatePrice(glazingPrice, packPrice);
+    // update the final price
+    calculatePrice();
 }
 
+// Calculates and updates the final price on the product detail page
 function calculatePrice() {
-    // Select what the current glazing option is and get it's value
-    // Select what the current pack size option is and get it's value
-    // Use the formula and change the inner text of product detail's price
-    const basePrice = '2.49';
-    console.log(glazingChange(element));
-    console.log(packPrice);
-    const finalPrice = (parseInt(basePrice + glazingChange(element)) * packPrice);
-
-
-
-}
-
-function updatePrice() {
-    // Select what the current glazing option is and get it's value
-    // Select what the current pack size option is and get it's value
-    // Use the formula and change the inner text of product detail's price
+    const basePrice = 2.49;
+    // Equation, can't access the variables necessary
+    const finalPrice = (basePrice + glazingPrice) * packPrice;
+    // Does this need to be a separate function?
     const productDetailPrice = document.querySelector('.detail-price');
-    console.log(' The current final price of this product is ' + finalPrice);
     productDetailPrice.innerText = finalPrice;
-
+    console.log(' The current final price of this product is ' + finalPrice);
 }
+
