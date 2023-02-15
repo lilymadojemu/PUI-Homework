@@ -60,7 +60,7 @@ function packSizeOnSelectValueChange() {
 
 packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
 
-function glazingChange() {
+function glazingChange(element) {
     // get the value (price adaption) of selected element
     var glazingPrice = parseInt(element.value);
     console.log('This is the current glazing value ' + glazingPrice);
