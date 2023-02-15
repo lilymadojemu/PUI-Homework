@@ -14,6 +14,12 @@ const packSizeOptions = {
     '12':10.0,
 }
 
+// Default Price of the selected glazing option
+var glazingPrice = '0';
+
+// Default Price of the selected pack size option
+var packPrice = '0';
+
 // Array of glazings and their price adaptions that will appear in pack size drop down menu
  let all_glazing = [];
 
@@ -33,12 +39,12 @@ for (i in glazingOptions) {
     glazingSelectElement.appendChild(option);
 }
 
-// When select element changes, the final price is recalculated
+// Change in drop down menu for glazing option selected based on user's input
 function glazingOnSelectValueChange() {
     console.log('You selected ' + this.value); 
 }
 
-// Looking/listening for user's selection on the drop down menu
+// Looking/listening for user's selection on the glazing drop down menu
 glazingSelectElement.addEventListener('change', glazingOnSelectValueChange);
 
 // Retrieving the drop down menu for pack size
@@ -54,35 +60,32 @@ for (i in packSizeOptions) {
     packSizeSelectElement.add(option);
 }
 
+// Change in drop down menu for pack size option selected based on user's input
 function packSizeOnSelectValueChange() {
     console.log('You selected ' + this.value);
 }
 
+// Looking/listening for user's selection on the pack size drop down menu 
 packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
 
+// Get's the current glazing option's price and change's the final price based on user's selection
 function glazingChange(element) {
-    // get the value (price adaption) of selected element
-    var glazingPrice = parseInt(element.value);
-    console.log('This is the current glazing value ' + glazingPrice);
+    glazingPrice = parseInt(element.value);
     calculatePrice();
 }
 
+// Get's the current pack size price and change's the final price based on user's selection
 function packSizeChange(element) {    
-    // get the value (price adaption) of selected element
-    const packPrice = parseInt(element.value);
-    console.log('This is the current pack size value ' + packPrice);
-    // update the final price
+    packPrice = parseInt(element.value);
     calculatePrice();
 }
 
 // Calculates and updates the final price on the product detail page
 function calculatePrice() {
     const basePrice = 2.49;
-    // Equation, can't access the variables necessary
     const finalPrice = (basePrice + glazingPrice) * packPrice;
-    // Does this need to be a separate function?
     const productDetailPrice = document.querySelector('.detail-price');
-    productDetailPrice.innerText = finalPrice;
-    console.log(' The current final price of this product is ' + finalPrice);
+    // Credits .toFixed(): https://www.w3schools.com/jsref/jsref_tofixed.asp#:~:text=The%20toFixed()%20method%20rounds,a%20specified%20number%20of%20decimals.
+    productDetailPrice.innerText = finalPrice.toFixed(2);
 }
 
