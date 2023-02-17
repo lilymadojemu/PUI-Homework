@@ -85,5 +85,4 @@ function calculatePrice() {
     const productDetailPrice = document.querySelector('.detail-price');
     // Credits .toFixed(): https://www.w3schools.com/jsref/jsref_tofixed.asp#:~:text=The%20toFixed()%20method%20rounds,a%20specified%20number%20of%20decimals.
     productDetailPrice.innerText = finalPrice.toFixed(2);
-}
-
+};

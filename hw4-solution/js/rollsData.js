@@ -49,7 +49,14 @@ headerElement.innerText = rollType + ' Cinnamon Roll';
 
 // Update Image based on selected product
 const productDetailImage = document.querySelector('.detail-pics');
+// Credits String.toLowerCase(): https://www.freecodecamp.org/news/javascript-tolowercase-how-to-convert-a-string-to-lowercase-and-uppercase-in-js/
 productDetailImage.src = 'bakery_products/' + rollType.toLowerCase() + '-' + 'cinnamon' + '-' + 'roll'+ '.jpg';
 console.log(productDetailImage.src);
 // Updates the alt text of image to match the selected product
 productDetailImage.alt = rollType + " Cinnamon Roll";
+
+
+const productBasePrice = document.querySelector('.detail-price');
+// default Price of product shown on detail page
+// productBasePrice.innerText = rolls[rollType[basePrice]];
+console.log(productBasePrice);
