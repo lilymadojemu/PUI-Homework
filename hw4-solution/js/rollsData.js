@@ -45,10 +45,11 @@ console.log(rollType);
 // Update Detail Page's Header text based on chosen product
 const headerElement = document.querySelector('.detail-heading');
 // Change text of header element based on chosen product
-headerElement.innerText = rollType;
+headerElement.innerText = rollType + ' Cinnamon Roll';
 
 // Update Image based on selected product
 const productDetailImage = document.querySelector('.detail-pics');
-productDetailImage.src = './bakery_products/' + rollType + '.png';
+productDetailImage.src = 'bakery_products/' + rollType.toLowerCase() + '-' + 'cinnamon' + '-' + 'roll'+ '.jpg';
+console.log(productDetailImage.src);
 // Updates the alt text of image to match the selected product
-productDetailImage.alt = rollType;
+productDetailImage.alt = rollType + " Cinnamon Roll";
