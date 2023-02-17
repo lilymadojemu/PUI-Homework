@@ -1,0 +1,134 @@
+/* Shopping Cart Page */
+
+/* PRODUCTS link appearance for the shopping car page */
+#PRODUCTS-shopping{
+    display: inline-block;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+/* Appearance of CART link on the shopping cart page */
+#CART-shopping{
+    background-color: yellow;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 50px;
+}
+
+/* Heading of the shopping cart page */
+#shopping-heading{
+    font-size: 25px;
+    font-weight: lighter;
+    padding:15px; 
+    width: 200px;
+}
+
+/* Refers to entire area of shopping cart page below its heading */
+.shopping-content{
+    display:flex;
+    width: 50%;
+}
+
+/* Content that is on the right side of the overall shopping cart page */
+.right-shopping{
+    display: block;
+    margin-left: 75%;
+
+}
+
+/* Cart item description of Original Cinnamon roll */
+.OG-cinnamon-roll-cart{
+    display: flex;
+}
+
+/* Cart item description of Double ChocolateCinnamon roll */
+.DC-cinnamon-roll-cart{
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: auto;
+
+}
+
+/* Pictures of the items "in cart" */
+.shopping-pics{
+    background-color: black;
+    border: 3px solid black;
+    height:100px;
+    object-fit: cover;
+    width:100px;      
+}
+
+/* "remove" link at the bottom of pictures in the shopping cart*/
+.remove{
+    display: block;
+    font-size: 9px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 1px;
+    text-decoration: underline gray;
+}
+
+/* text description of shopping cart items */
+.description-shopping-cart{
+    display: inline-block;
+    font-size: 20px;
+    margin: auto;
+    height: fit-content;    
+    margin-left: 5%;
+    width: 350px;
+}
+
+/* line dividing in cart products with the total cost of them */
+#shopping-line {
+    background: black;
+    margin: auto;
+    height:5px;
+    width: 100%;
+}
+
+/* Comprised of the shopping line, final total, and checkout button */
+.shopping-final-elements{
+    display: block;
+}
+
+/* Comprises the word "total" and the final cost of items in the cart */
+.final-total{
+    display: flex;
+    margin: auto;
+    font-size: 25px;
+    gap: 372px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Prices of individual in-cart items*/
+.shopping-price{
+    font-size: 25px;
+    margin: auto;
+    margin-left:30%;
+    margin-bottom: 30px;
+    width: 290px; 
+}
+
+/* Total and price from the items in the shopping cart */
+.shopping-total{
+    margin-left: 20%;
+}
+
+/* Checkout Button */
+#checkout-button{
+    background-color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+    border: 3px solid black;
+    margin: auto;
+    margin-left: 500px;
+    margin-bottom:100px;
+    width: 150px;
+}

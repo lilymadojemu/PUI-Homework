@@ -1,0 +1,117 @@
+/* Shopping Detail Page */
+
+/* Heading for detail page, adjusted for width compared to other pages */
+.detail-heading{
+    margin-left: 5px;
+    font-weight: lighter;
+    font-size: 30px;
+    padding: 20px; 
+    width: 400px;
+}
+
+/* Contents of detail page below heading */
+.detail-page{
+    margin-bottom: 60px;
+}
+
+/* Container for content of detail page */
+.detail-content{
+    display:flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Right side of detail page */
+.right-detail{
+    height: 550px; 
+    flex: 1 0;
+    font-size: 30px; 
+    
+}
+
+/* Description of Product pictured on detail page */
+.detail-description{
+    display:block;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 60px;
+    width: 300px;
+}
+
+/* Image of product that appears on the detail page */
+.detail-pics{
+    background-color: black;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    margin-left: 50px;
+    flex-grow: 1;
+    height:50%;
+    object-fit: cover;
+    padding:2px;
+    width:50%;
+}
+
+/* Drop down menus */
+.selectors{
+    display:block;
+    width: 200px;
+}
+
+/*"Glazing" title for drop down menu */
+#glazing-title-selector{
+    font-size: 20px;
+    font-weight: lighter;  
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Specific Drop Down menu for Glazing */
+#glazing-selector{
+    border: 3px solid black;
+    font-size: 15px;
+    padding: 5px;
+    width: 200px;
+
+}
+
+/* "Pack Size" title for drop down menu */
+#pack-size-title-selector{
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+/* Specific drop down menu for Pack Size */
+#pack-size-selector{
+    border: 3px solid black;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 70px;
+    width: 200px;
+}
+
+/* Price of the image detailed */
+.detail-price{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: auto;
+}
+
+/* Button for "add to cart" */
+.adding-to-cart{
+    background-color: yellow;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+/* Concerning the price of detailed item and the button to add to cart*/
+.detail-elements{
+    display:inline-block;
+    margin-top: 50px;
+    width: 200px;
+}
