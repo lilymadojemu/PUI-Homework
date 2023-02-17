@@ -1,3 +1,5 @@
+import { productBasePrice } from "./rollsData.js";
+
 // Object for glazings
 const glazingOptions = {
     'Keep Original':0.0,
@@ -24,7 +26,7 @@ let all_pack_size = [];
 let glazingSelectElement = document.querySelector('#glazing-selector');
 
 // For loop that adds glazing options to glazing drop down menu
-for (i in glazingOptions) {
+for ( var i in glazingOptions) {
     all_glazing.push(i);
     var option = document.createElement('option');
     option.text = i;
@@ -44,7 +46,7 @@ glazingSelectElement.addEventListener('change', glazingOnSelectValueChange);
 let packSizeSelectElement = document.querySelector('#pack-size-selector')
 
 // For loop for adding pack sizes to pack size drop down menu
-for (i in packSizeOptions) {
+for (var i in packSizeOptions) {
     all_pack_size.push(i);
     var option = document.createElement('option');
     option.text = i;
@@ -78,10 +80,12 @@ function packSizeChange(element) {
     calculatePrice();
 }
 
+
+
 // Calculates and updates the final price on the product detail page
 function calculatePrice() {
-    const basePrice = 2.49;
-    const finalPrice = (basePrice + glazingPrice) * packPrice;
+    // const productBasePrice = document.querySelector('.detail-price');
+    const finalPrice = (parseFloat(productBasePrice) + glazingPrice) * packPrice;
     const productDetailPrice = document.querySelector('.detail-price');
     // Credits .toFixed(): https://www.w3schools.com/jsref/jsref_tofixed.asp#:~:text=The%20toFixed()%20method%20rounds,a%20specified%20number%20of%20decimals.
     productDetailPrice.innerText = finalPrice.toFixed(2);

@@ -8,8 +8,8 @@
         <title>Product Detail Page</title>
         <meta charset="UTF-8">
 
-        <script defer src="js/detail.js"></script>
-        <script defer src="js/rollsData.js"></script>
+        <script defer type ="module" src="js/rollsData.js"></script>
+        <script defer type ="module" src="js/detail.js"></script>
 
     </head>
 
@@ -57,17 +57,17 @@
                         <!-- Drop Down Menus for Glazing and Pack Size -->
                         <div class="selectors">
                             <h6 id="glazing-title-selector"> Glazing:</h6>
-                            <select name="glazing-drop-down" id="glazing-selector" onchange= "glazingChange(this)">
+                            <select name="glazing-drop-down" id="glazing-selector" onchange="glazingChange(this)">
                             </select>
 
                             <h6 id="pack-size-title-selector">Pack Size:</h6>
-                            <select name="pack-size-drop-down" id="pack-size-selector" onchange= "packSizeChange(this)">
+                            <select name="pack-size-drop-down" id="pack-size-selector" onchange="packSizeChange(this)">
                             </select>
                         </div>
 
                         <div class="detail-elements">
                             <!-- Price for the Product appearing on the Detail Page -->
-                            <span class="detail-price">  </span>
+                            <span class="detail-price">  Test </span>
 
                             <!-- Button to add the product appearing on the Detail Page to a shopping cart-->
                             <button class="adding-to-cart">

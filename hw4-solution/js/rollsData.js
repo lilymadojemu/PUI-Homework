@@ -55,8 +55,9 @@ console.log(productDetailImage.src);
 // Updates the alt text of image to match the selected product
 productDetailImage.alt = rollType + " Cinnamon Roll";
 
-
+// 
 const productBasePrice = document.querySelector('.detail-price');
 // default Price of product shown on detail page
-// productBasePrice.innerText = rolls[rollType[basePrice]];
-console.log(productBasePrice);
+productBasePrice.innerText = rolls[rollType]['basePrice'];
+
+export {productBasePrice};
