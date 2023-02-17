@@ -87,3 +87,19 @@ function calculatePrice() {
     productDetailPrice.innerText = finalPrice.toFixed(2);
 }
 
+// URL Params
+
+// Array that will house products intended to be checkedout
+const cart = [];
+
+// Gather info from URL
+const queryString = window.location.search;
+console.log(queryString);
+
+// Creating a new query string with created url
+const params = new URLSearchParams(queryString);
+console.log(params);
+
+// Gets the current roll type and stores it in a variable
+const rollType = params.get('roll');
+console.log(rollType);
