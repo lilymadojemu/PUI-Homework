@@ -58,19 +58,25 @@
 }
 
 /* Original Cinnamon Roll Product Positioning*/
-.OG-cinnamon-roll-gallery{
+.gallery-Products{
     display: block;
 }
 
 /* Highlight Original Cinnamon Roll picture when clicked */
-.OG-cinnamon-roll-gallery img:active {
+.gallery-Products img:active {
     background-color: yellow;
     border: 1px solid black;
     margin: auto;
 }
 
 /* Original Cinnamon roll pic and text highlight properties*/
-.OG-cinnamon-roll-gallery:active{
+.gallery-Products:active{
+    background-color: yellow;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.gallery-Products:hover{
     background-color: yellow;
     cursor: pointer;
     font-weight: bold;
