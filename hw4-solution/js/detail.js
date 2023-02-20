@@ -156,6 +156,30 @@ function calculatePrice() {
     productDetailPrice.innerText = finalPrice.toFixed(2);
 };
 
+// Roll Class used to save all of the current product Information
+class Roll {
 
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
 
+// Creating an instance of the class Roll when clicking Add to Cart Button 
+// Finding add to cart button in detail html file
+const addToCart = document.querySelector('.adding-to-cart');
 
+// Creating the action of clicking button 
+addToCart.addEventListener('click', createRoll(element));
+
+// Create a function that creates an instance of a class?
+
+// Function has to get current Glazing selection, packsize 
+
+function createRoll(element) {
+    // rollType, rollGlazing, packSize, basePrice)
+
+};
+// const cartRoll= new Roll('rollType', 'currentGlazing', 'test-body');
