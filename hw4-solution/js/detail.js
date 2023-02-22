@@ -84,8 +84,6 @@ var glazingPrice = '0';
 // Default Price of the selected pack size option
 var packPrice = '1';
 
-// URL Params
-
 // Array that will house products intended to be checked out
 const cart = [];
 
