@@ -42,7 +42,7 @@ const packSizeOptions = {
     '12': 10.0,
 };
 
-// Array of glazings and their price adaptions that will appear in pack size drop down menu
+// Array of glazings and their price adaptions that will appear in Glazing drop down menu
  let all_glazing = [];
 
 // Array of pack sizes and their price adaptions that will appear in pack size drop down menu
@@ -56,19 +56,11 @@ for ( var i in glazingOptions) {
     all_glazing.push(i);
     var option = document.createElement('option');
     option.text = i;
-    option.value = glazingOptions[i]; 
+    option.value = i; 
     glazingSelectElement.appendChild(option);
-}
-
-// Change in drop down menu for glazing option selected based on user's input
-function glazingOnSelectValueChange() {
-    console.log('This glazing option value is ' + this.value); 
 };
 
-// Looking/listening for user's selection on the glazing drop down menu
-glazingSelectElement.addEventListener('change', glazingOnSelectValueChange);
-
-// Retrieving the drop down menu for pack size
+// Retrieving the reference for the drop down menu for pack size
 let packSizeSelectElement = document.querySelector('#pack-size-selector')
 
 // For loop for adding pack sizes to pack size drop down menu
@@ -76,17 +68,15 @@ for (var i in packSizeOptions) {
     all_pack_size.push(i);
     var option = document.createElement('option');
     option.text = i;
-    option.value = packSizeOptions[i]; 
-    packSizeSelectElement.add(option);
-}
+    option.value = i; 
+    packSizeSelectElement.appendChild(option);
+};
 
-// Change in drop down menu for pack size option selected based on user's input
-function packSizeOnSelectValueChange() {
-    console.log('This pack size option value is ' + this.value);
-}
+// Default Glaze Selected
+var currentSelectedGlaze = 'Keep Original';
 
-// Looking/listening for user's selection on the pack size drop down menu 
-packSizeSelectElement.addEventListener('change', packSizeOnSelectValueChange);
+// Default Pack Size name
+var currentSelectedPackSize = '1';
 
 // Default Price of the selected glazing option
 var glazingPrice = '0';
@@ -135,22 +125,24 @@ productBasePrice.innerText = rolls[rollType]['basePrice'];
 
 // Get's the current glazing option's price and change's the final price based on user's selection
 function glazingChange(element) {
-    glazingPrice = parseFloat(element.value);
+    let key = element.value;
+    currentSelectedGlaze = key;
+    glazingPrice = glazingOptions[key];
     calculatePrice();
 };
 
 // Get's the current pack size price and change's the final price based on user's selection
-function packSizeChange(element) {    
-    packPrice = parseInt(element.value);
+function packSizeChange(element) {
+    let key = element.value;
+    currentSelectedPackSize = key;   
+    packPrice = packSizeOptions[key];
     calculatePrice();
 };
 
 // Calculates and updates the final price on the product detail page
 function calculatePrice() {
     const basePrice = parseFloat(rolls[rollType]['basePrice']);
-    console.log(basePrice);
     const finalPrice = (basePrice + glazingPrice) * packPrice;
-    console.log(finalPrice);
     const productDetailPrice = document.querySelector('.detail-price');
     // Credits .toFixed(): https://www.w3schools.com/jsref/jsref_tofixed.asp#:~:text=The%20toFixed()%20method%20rounds,a%20specified%20number%20of%20decimals.
     productDetailPrice.innerText = finalPrice.toFixed(2);
@@ -158,28 +150,22 @@ function calculatePrice() {
 
 // Roll Class used to save all of the current product Information
 class Roll {
-
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
+        const addToCart = document.querySelector('.adding-to-cart');
+        addToCart.onclick = this.createRoll;
     }
-}
+};
 
 // Creating an instance of the class Roll when clicking Add to Cart Button 
-// Finding add to cart button in detail html file
-const addToCart = document.querySelector('.adding-to-cart');
-
-// Creating the action of clicking button 
-addToCart.addEventListener('click', createRoll(element));
-
-// Create a function that creates an instance of a class?
-
-// Function has to get current Glazing selection, packsize 
-
-function createRoll(element) {
-    // rollType, rollGlazing, packSize, basePrice)
-
+function createRoll() {
+    const currentRollGlazing = currentSelectedGlaze; 
+    const currentPackSize = currentSelectedPackSize;
+    const currentBasePrice = rolls[rollType]['basePrice'];
+    const cartRoll = new Roll(rollType,currentRollGlazing,currentPackSize, currentBasePrice);
+    cart.push(cartRoll);
+    console.log(cart);
 };
-// const cartRoll= new Roll('rollType', 'currentGlazing', 'test-body');
