@@ -76,30 +76,39 @@ function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
     return shoppingRoll;
 };
 
+function displayCartItems(rollNum){
+    console.log("Look! Something displayed");
+};
+
 const rollOne = addNewRoll(
     'Original',
     'Sugar Milk',
     '1',
-    shoppingCalculatePrice(rolls['Original']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['1'])
+    shoppingCalculatePrice(rolls['Original']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['1']),
+    displayCartItems(rollOne)
 );
 
 const rollTwo = addNewRoll (
     'Walnut',
     'Vanilla Milk',
     '12',
-    shoppingCalculatePrice(rolls['Walnut']['basePrice'], glazingOptions['Vanilla Milk'], packSizeOptions['12'])
+    shoppingCalculatePrice(rolls['Walnut']['basePrice'], glazingOptions['Vanilla Milk'], packSizeOptions['12']),
+    displayCartItems(rollTwo)
 );
 
 const rollThree = addNewRoll (
     'Raisin',
     'Sugar Milk',
     '3',
-    shoppingCalculatePrice(rolls['Raisin']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['3'])
+    shoppingCalculatePrice(rolls['Raisin']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['3']),
+    displayCartItems(rollThree)
 );
 
 const rollFour = addNewRoll (
     'Apple',
     'Original',
     '3',
-    shoppingCalculatePrice(rolls['Apple']['basePrice'], glazingOptions['Keep Original'], packSizeOptions['3'])
+    shoppingCalculatePrice(rolls['Apple']['basePrice'], glazingOptions['Keep Original'], packSizeOptions['3']),
+    displayCartItems(rollFour)
 );
+
