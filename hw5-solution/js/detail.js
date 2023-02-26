@@ -148,11 +148,11 @@ function calculatePrice() {
 
 // Roll Class used to save all of the current product Information
 class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
+    constructor(rollType, rollGlazing, packSize, rollPrice) {
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
-        this.basePrice = basePrice;
+        this.basePrice = rollPrice;
         const addToCart = document.querySelector('.adding-to-cart');
         addToCart.onclick = this.createRoll;
     }
@@ -166,4 +166,5 @@ function createRoll() {
     const cartRoll = new Roll(rollType,currentRollGlazing,currentPackSize, currentBasePrice);
     cart.push(cartRoll);
     console.log(cart);
+    return cartRoll;
 };
