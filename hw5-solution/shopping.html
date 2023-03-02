@@ -40,30 +40,27 @@
 
                 <div class="right-shopping">
 
+                    <template id="cinna-roll-template">
+                        <div class="cartItem">
+                            <div class="pic+remove">
+                                <!-- Image of Original Cinnamon Roll-->
+                                <img class="shopping-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
+                                
+                                <!-- "remove" that appears below the Original Cinnamon Roll-->
+                                <p class="removeBtn">Remove</p>
 
-                    <div class="OG-cinnamon-roll-cart">
+                            </div>
 
-                        <div class="pic+remove">
-                            <!-- Image of Original Cinnamon Roll-->
-                            <img class="shopping-pics" src="bakery_products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
+                            <!-- Description of the Original Cinnamon Roll in the cart to include its name, glazing type, and pack size -->
+                            <div class="description-shopping-cart">
+                                <p class="cartRollType"> </p>  
+                                <p class="cartItemGlazing"> </p>
+                                <p class="cartItemPackSize"> </p>
+                            </div>
                             
-                            <!-- "remove" that appears below the Original Cinnamon Roll-->
-                            <p class="remove">Remove</p>
-
+                            <p class="cartItemPrice"></p>
                         </div>
-
-                        <!-- Description of the Original Cinnamon Roll in the cart to include its name, glazing type, and pack size -->
-                        <div class="description-shopping-cart">
-                            <p>Original Cinnamon roll  
-                            <br>Glazing: Keep Original 
-                            <br>Pack Size: 1</p>
-                        </div>
-                        
-                        <!-- Price of the Original Cinnamon Roll -->
-                        <p class="shopping-price"> 
-                            $2.49
-                        </p>
-                    </div>
+                    </template>
 
                 <div class="DC-cinnamon-roll-cart">
 
@@ -98,7 +95,7 @@
                             <!-- Total price of items in the shopping cart -->
                             <span class="shopping-total">Total</span>
                             
-                            <span class="shopping-total-price"> $29.94</span>
+                            <span class="shopping-total-price">$29.94</span>
                             
                         </div>   
                         <!-- Button to "checkout" the items in the shopping cart -->
