@@ -1,0 +1,117 @@
+/* Shopping Cart Page */
+
+/* PRODUCTS link appearance for the shopping car page */
+#PRODUCTS-shopping{
+    display: inline-block;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+/* Appearance of CART link on the shopping cart page */
+#CART-shopping{
+    background-color: yellow;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 50px;
+}
+
+/* Heading of the shopping cart page */
+#shopping-heading{
+    font-size: 25px;
+    font-weight: lighter;
+    padding:15px; 
+    width: 200px;
+}
+
+/* Refers to entire area of shopping cart page below its heading */
+.shopping-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 40%;
+  }
+  
+
+/* Content that is on the right side of the overall shopping cart page */
+.right-shopping{
+    display: flex;
+	flex-wrap: wrap;
+
+}
+
+/* Cart item description of Original Cinnamon roll */
+.cartItem{
+    align-items: center;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+	justify-content: space-between;
+}
+
+/* Pictures of the items "in cart" */
+.cartItemPic{
+    background-color: black;
+    border: 3px solid black;
+    height:100px;
+    object-fit: cover;
+    width:100px;      
+}
+
+/* "remove" link at the bottom of pictures in the shopping cart*/
+.removeBtn{
+    display: block;
+    font-size: 9px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    text-decoration: underline black;
+}
+
+/* text description of shopping cart items */
+.description-shopping-cart{
+    flex: 1 0 auto;
+	margin-left: 30px;
+}
+
+.whiteSpace{
+    flex-basis: 200px;
+}
+
+/* Comprised of the shopping line, final total, and checkout button */
+.checkoutInfo{
+    border-top: 5px solid black;
+	display: flex;
+	justify-content: space-between;
+}
+
+.shopping-total-price{
+    text-align: right;
+}
+
+/* Prices of individual in-cart items*/
+.cartItemPrice{
+    margin: auto;
+    margin-left:50%;
+    margin-bottom: 30px;
+    width: 290px; 
+    text-align: right;
+    padding-top: 50px;
+
+}
+
+/* Checkout Button */
+#checkout-button{
+    background-color: yellow;
+    font-size: 25px;
+    font-weight: bold;
+    border: 3px solid black;
+    margin: auto;
+    margin-left: 500px;
+    margin-bottom:100px;
+    width: 150px;
+};

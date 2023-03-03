@@ -1,0 +1,91 @@
+/* Universal */
+
+/* Bakery Shop Logo*/
+.bakery-logo{
+   box-sizing: border-box; 
+   object-fit: cover;
+   height: auto;
+   width: auto;
+   padding: 30px;
+   margin: auto;
+
+}
+
+p, select, button {
+	font-size:  20px;
+}
+
+/* Line dividing the logo from the rest of information on the three pages */
+.line{
+    background:black;
+    height:5px; 
+    margin-bottom: auto;
+    margin-top: 25px; 
+    width: 100%;
+}
+/* rectangle encompassing all the pages */
+/* Credits: https://www.computerhope.com/issues/ch001392.htm */
+#rectangle{
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 50px;
+    height:auto;
+    margin:0 auto;
+    max-width: 1200px;
+    padding-right: 50px;
+    width: fit-content;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Encompases the content at the top of the page that is universal to the gallery, detail, and cart pages */
+.top-page-elements{
+    display: flex;
+}
+/* Left content of the top-page elements, AKA the Bakery Logo */
+.left-page{
+    flex-grow: 1;
+}
+
+/* Right content of the top-page elements, AKA line, PRODUCT, CART links */
+.right-page{
+    width: calc(100% - 450px);    
+}
+
+/* Appearance of the PRODUCTS and CART links at top of the 3 pages */
+.top-page-links{
+    color:black;
+    display: inline-block;
+    margin-left: 500px;
+    margin-top: 45px;
+    font-size:17px;
+    width: 1000px;
+}
+
+/* Appearance of PRODUCTS link for Gallery and Detail Page */
+.PRODUCTS{
+    background-color: yellow;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: auto;
+    text-decoration: none;
+}
+
+/* Appearance of CART link for Gallery and Detail Page */
+.CART{
+    display: inline-block;
+    font-weight: 100;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+/* Font-family of all text on the website */
+body{
+    font-family: sans-serif;
+}
+

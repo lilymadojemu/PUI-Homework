@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head for the Product Detail Page -->
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/detail.css">
+        <title>Product Detail Page</title>
+        <meta charset="UTF-8">
+        
+        <script defer src="js/detail.js"></script>
+
+    </head>
+
+    <body>
+        <div id="rectangle">
+
+            <div class="detail-page">
+
+                    <div class="top-page-elements">
+                        <div class="left-page">
+                            <!-- Logo for the Bun Bun Bake Shop -->
+                            <div class="bakery-logo">
+                                <a href="index.html"><img src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
+                            </div>
+                        </div>
+
+                        <div class="right-page">
+                            <!-- PRODUCTS and CART links to go to the gallery or shopping cart pages respectively-->
+                            <div class="top-page-links">
+                                <a href="index.html"><h4 class="PRODUCTS">PRODUCTS</h4></a>
+                                <a href="shopping.html"><h4 class="CART">CART</h4></a>
+                            </div> 
+                            
+                            <!--Line to divide bakery logo at top of page from the rest of gallery content-->
+                            <div class="line"></div>
+
+                            <!-- Product Detail Page's Heading -->
+                            <h4 class="detail-heading"> </h4>
+                        </div>
+                    </div>
+
+                <div class="detail-content">
+                    <!-- Image of selected product Product -->
+                    <img class="detail-pics" src="" alt="">
+                    
+                    <!-- Right side of detail page -->
+                    <div class="right-detail">
+                        <!-- Description for Product Detail Page -->
+                        <div class="detail-description">
+                            <p>Customize our delicious,
+                            hand-made cinnamon roll to 
+                            your liking!</p>
+                        </div>
+
+                        <!-- Drop Down Menus for Glazing and Pack Size -->
+                        <div class="selectors">
+                            <h6 id="glazing-title-selector"> Glazing:</h6>
+                            <select name="glazing-drop-down" id="glazing-selector" onchange= "glazingChange(this)">
+                            </select>
+
+                            <h6 id="pack-size-title-selector">Pack Size:</h6>
+                            <select name="pack-size-drop-down" id="pack-size-selector" onchange= "packSizeChange(this)">
+                            </select>
+                        </div>
+
+                        <div class="detail-elements">
+                            <!-- Price for the Product appearing on the Detail Page -->
+                            <span class="detail-price"> </span>
+
+                            <!-- Button to add the product appearing on the Detail Page to a shopping cart-->
+                            <button class="adding-to-cart" onclick= "createRoll(this)">
+                                Add to Cart
+                            </button>
+                        <div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </body>
+</html>
+
+

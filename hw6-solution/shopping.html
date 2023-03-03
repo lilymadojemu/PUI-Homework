@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head for the Shopping Cart Page -->
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cart.css">
+        <title>Shopping Cart</title>
+        <meta charset="UTF-8">
+
+        <script defer src="js/shopping.js"></script>
+
+    </head>
+
+    <body>
+        <div id="rectangle">
+            <div class="top-page-elements">
+                
+                <div class="left-page">            
+                    <a href="index.html"><img class="bakery-logo" src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
+                </div>
+
+                <div class="right-page">
+                    <!-- PRODUCTS and CART links to go to the gallery or shopping cart pages respectively-->
+                    <div class="top-page-links">
+                        <a href="index.html"><span id="PRODUCTS-shopping">PRODUCTS</span></a>
+                        <a href="shopping.html"><span id="CART-shopping">CART</span></a>
+                    </div> 
+                    <!--Line to divide bakery logo at top of page from the rest of gallery content-->
+                    <div class="line"></div>
+
+                    <!-- Heading for the Shopping Cart Page -->
+                    <h4 id="shopping-heading">Shopping Cart</h4> 
+                </div>
+            </div>
+
+            <div class="shopping-content">
+                <div class="right-shopping">
+                    <template id="cinna-roll-template">
+                        <div class="cartItem">
+                            <div class="pic+remove">
+                                <img class="cartItemPic" src="" alt="">
+                                <p class="removeBtn">Remove</p>
+                            </div>
+                            <div class="description-shopping-cart">
+                                <p class="cartRollType"></p>  
+                                <p class="cartItemGlazing"></p>
+                                <p class="cartItemPackSize"></p>
+                            </div>
+                            <p class="cartItemPrice"></p>
+                        </div>
+                    </template>
+                    <div class="cart-items">
+                    </div>    
+                    <div class="checkoutInfo">
+                        <div class="whiteSpace"></div> 
+                        <div class="description-shopping-cart">
+                            <p>Total</p>
+                        </div>   
+                        <div>
+                            <p class="shopping-total-price"></p>
+                            <button id="checkout-button">
+                                Checkout
+                            </button>            
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>
