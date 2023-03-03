@@ -56,7 +56,7 @@
 }
 
 /* Pictures of the items "in cart" */
-.shopping-pics{
+.cartItemPic{
     background-color: black;
     border: 3px solid black;
     height:100px;

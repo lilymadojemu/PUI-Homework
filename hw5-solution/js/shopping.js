@@ -42,92 +42,96 @@ const packSizeOptions = {
     '12': 10.0,
 };
 
-// Array that will house products intended to be checked out
-const shoppingCart = [];
-
 // Roll Class used to save all of the current product Information
-class Roll_Class {
+class roll {
     constructor(rollType, rollGlazing, packSize, rollPrice) {
         this.type = rollType;
         this.glazing =  rollGlazing;
         this.size = packSize;
-        this.basePrice = rollPrice;
+        this.basePrice = rollPrice;    
+        
     }
 };
 
-// // Gather info from URL
-// const queryString = window.location.search;
-// console.log(queryString);
+// Set that will house products intended to be checked out
+const shoppingCart = new Set();
 
-// // Creating a new query string with created url
-// const params = new URLSearchParams(queryString);
-// console.log(params);
+// Adding a new cart item to the shopping cart set
+function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
+    const cartItem = new roll(rollType, rollGlazing, packSize, rollPrice);
+    shoppingCart.add(cartItem);
+    createCartItem(cartItem);
+    updateTotalPrice(cartItem);
+    return cartItem;    
 
-// const rollType = params.get('roll');
+};    
 
 // Calculates and updates the final price on the product detail page
 function shoppingCalculatePrice(basePrice, glazingPrice, packPrice) {
     const finalPrice = (basePrice+ glazingPrice) * packPrice;
     return finalPrice.toFixed(2);
 };
-function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
-    const shoppingRoll = new Roll_Class(rollType, rollGlazing, packSize, rollPrice);
-    shoppingCart.push(shoppingRoll);
-    return shoppingRoll;
-};    
 
-for (const shoppingRoll of shoppingCart) {
-    console.log(shoppingRoll);
-    createCartItem(shoppingRoll);
+// A loop to create and add each cart item to the shopping cart 
+for (const cartItem of shoppingCart) {
+    createCartItem(cartItem);
 };
 
-function createCartItem(shoppingRoll){
-    // img, rolltype, rollGlazing, packSize, calculateed price, remove button
-    console.log('Creating an Element!');
-    // // Grab a reference to the cinna roll template:
+
+function createCartItem(cartItem){
+    // Grab a reference to the cinna roll template:
     const template = document.querySelector('#cinna-roll-template');
     const clone = template.content.cloneNode(true);
-    shoppingRoll.element = clone.querySelector('.cartItem');
-    console.log(shoppingRoll.element);
+    cartItem.element = clone.querySelector('.cartItem');
 
-    // 
-    const cinnaRollImage = document.querySelector('.shopping-pics');
-    const cinnaRollType = document.querySelector('.cartRollType');
-    const cinnaRollGlazing = document.querySelector('.cartItemGlazing');
-    const cinnaRollPackSize = document.querySelector('.cartItemPackSize')
-    const cinnaRollFinalPrice = document.querySelector('.cartItemPrice');
+    // update Dom Elements
+    const cinnaRollImage = clone.querySelector('.cartItemPic');
+    cinnaRollImage.src = `bakery_products/${cartItem.type.toLowerCase()}-cinnamon-roll.jpg`;
 
-    cinnaRollImage.src = `bakery_products/${cinnaRollType}-cinnamon-roll.jpg`;
-    cinnaRollType.textContent = rollType + ' Cinnamon Roll';
-    cinnaRollGlazing.textContent = 'Glazing ' + rollGlazing;
-    cinnaRollPackSize.textContent = 'Pack Size' + packSize;
-    cinnaRollFinalPrice.textContent = '$' + calculatedPrice;
+    const cinnaRollType = clone.querySelector('.cartRollType');
+    cinnaRollType.textContent = cartItem.type + ' Cinnamon Roll';
 
-    const removeCartItemBtn = document.querySelector('.removeBtn');
+    const cinnaRollGlazing = clone.querySelector('.cartItemGlazing');
+    cinnaRollGlazing.textContent = 'Glazing: ' + cartItem.glazing; 
+    
+    const cinnaRollPackSize =  clone.querySelector('.cartItemPackSize');
+    cinnaRollPackSize.textContent = 'Pack Size: ' + cartItem.size;    
+
+    const cinnaRollFinalPrice = clone.querySelector('.cartItemPrice');
+    cinnaRollFinalPrice.textContent = '$' + cartItem.basePrice;    
+
+    const removeCartItemBtn = clone.querySelector('.removeBtn');
     removeCartItemBtn.addEventListener('click', () =>{
-        deleteCartItem(shoppingRoll);
+        deleteCartItem(cartItem);
     });
 
-    updateRoll(shoppingRoll);
+    const shoppingCartContent = document.querySelector(".shopping-content");
+    shoppingCartContent.appendChild(clone);
+
 };
 
-function deleteCartItem(shoppingRoll){
-    shoppingRoll.element.remove();
-    shoppingCart.pop(shoppingRoll);
-}
+// Updating the totalPrice of the current cart Item
+function updateTotalPrice(cartItem) {
+    let totalPrice = 0;
+    for (const cartItem of shoppingCart) {
+        totalPrice += parseFloat(cartItem.basePrice);
+      };
+    document.querySelector('.shopping-total-price').textContent = '$' + totalPrice.toFixed(2);
+};
 
-// function updateRoll() {
-//     const cinnaImage = shoppingRoll.element.querySelector('.shopping-pics');
-//     cinnaImage.src = `bakery_products/${rollType}-cinnamon-roll.jpg`;
-// };
+// Deletes Cart Item from Shopping Carr
+function deleteCartItem(cartItem){
+    cartItem.element.remove();
+    shoppingCart.delete(cartItem);
+    updateTotalPrice(cartItem);
+};
 
+// Rolls in the shopping cart
 const rollOne = addNewRoll(
     'Original',
     'Sugar Milk',
     '1',
     calculatedPrice = shoppingCalculatePrice(rolls['Original']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['1']),
-    createCartItem(rollOne)
-    // createCartItem('Original', 'Sugar Milk', '1', calculatedPrice, 'bakery_products/Original-cinnamon-roll.jpg')
 );
 
 const rollTwo = addNewRoll (
@@ -135,7 +139,6 @@ const rollTwo = addNewRoll (
     'Vanilla Milk',
     '12',
     calculatedPrice = shoppingCalculatePrice(rolls['Walnut']['basePrice'], glazingOptions['Vanilla Milk'], packSizeOptions['12']),
-    // displayCartItems(rollTwo)
 );
 
 const rollThree = addNewRoll (
@@ -143,14 +146,13 @@ const rollThree = addNewRoll (
     'Sugar Milk',
     '3',
     calculatedPrice = shoppingCalculatePrice(rolls['Raisin']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['3']),
-    // displayCartItems(rollThree)
 );
 
 const rollFour = addNewRoll (
     'Apple',
     'Original',
     '3',
-    calculatedprice = shoppingCalculatePrice(rolls['Apple']['basePrice'], glazingOptions['Keep Original'], packSizeOptions['3']),
-    // displayCartItems(rollFour)
+    calculatedPrice = shoppingCalculatePrice(rolls['Apple']['basePrice'], glazingOptions['Keep Original'], packSizeOptions['3']),
 );
+
 
