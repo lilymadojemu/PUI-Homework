@@ -14,11 +14,9 @@
     <body>
         <div id="rectangle">
             <div class="top-page-elements">
-                <div class="left-page">
-                    <!-- Logo for the Bun Bun Bake Shop -->
-                    <div class="bakery-logo">
-                        <a href="index.html"><img src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
-                    </div>
+                
+                <div class="left-page">            
+                    <a href="index.html"><img class="bakery-logo" src="bakery_logo/logo-01.svg" alt="Bun Bun Bake Shop logo"></a>
                 </div>
 
                 <div class="right-page">
@@ -51,25 +49,19 @@
                             <p class="cartItemPrice"></p>
                         </div>
                     </template>
-                    
-                    <div id="shopping-line"></div> 
-
                     <div class="cart-items">
-                        <!-- Cart items will be dynamically added here -->
                     </div>    
-
-                    <div class="shopping-final-elements">
-                        <div class="final-total">
-                            <span class="shopping-total">Total</span>
-            
-                            <span class="shopping-total-price"></span>
-                            
+                    <div class="checkoutInfo">
+                        <div class="whiteSpace"></div> 
+                        <div class="description-shopping-cart">
+                            <p>Total</p>
                         </div>   
-                        <!-- Button to "checkout" the items in the shopping cart -->
-                        <button id="checkout-button">
-                            Checkout
-                        </button>
-                
+                        <div>
+                            <p class="shopping-total-price"></p>
+                            <button id="checkout-button">
+                                Checkout
+                            </button>            
+                        </div>
                     </div> 
                 </div> 
             </div>

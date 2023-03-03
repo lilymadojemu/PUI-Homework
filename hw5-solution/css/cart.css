@@ -45,8 +45,10 @@
 
 /* Cart item description of Original Cinnamon roll */
 .cartItem{
+    align-items: center;
     display: flex;
     flex-basis: 100%;
+    flex-direction: row;
 	justify-content: space-between;
 }
 
@@ -66,7 +68,8 @@
     font-weight: bold;
     margin: auto;
     margin-top: 1px;
-    text-decoration: underline gray;
+    margin-bottom: 10px;
+    text-decoration: underline black;
 }
 
 /* text description of shopping cart items */
@@ -75,41 +78,39 @@
 	margin-left: 30px;
 }
 
-/* line dividing in cart products with the total cost of them */
-#shopping-line {
+.whiteSpace{
     flex-basis: 200px;
 }
 
 /* Comprised of the shopping line, final total, and checkout button */
-.shopping-final-elements{
+.checkoutInfo{
     border-top: 5px solid black;
 	display: flex;
 	justify-content: space-between;
 }
 
-/* Comprises the word "total" and the final cost of items in the cart */
-.final-total{
-    /* display: flex;
-    margin: auto;
-    font-size: 25px;
-    gap: 372px;
-    margin-top: 20px; */
+.shopping-total-price{
     text-align: right;
 }
 
 /* Prices of individual in-cart items*/
 .cartItemPrice{
-    font-size: 25px;
     margin: auto;
-    margin-left:30%;
+    margin-left:50%;
     margin-bottom: 30px;
     width: 290px; 
+    text-align: right;
+    padding-top: 50px;
+
 }
 
 /* Total and price from the items in the shopping cart */
-.shopping-total{
-    margin-left: 20%;
-}
+/* .shopping-total{
+	flex: 1 0 auto;
+	margin-left: 30px; */
+
+    /* margin-left: 20%; */
+/* } */
 
 /* Checkout Button */
 #checkout-button{
@@ -121,5 +122,4 @@
     margin-left: 500px;
     margin-bottom:100px;
     width: 150px;
-    
-}
+};

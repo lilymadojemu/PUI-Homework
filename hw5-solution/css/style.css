@@ -11,6 +11,10 @@
 
 }
 
+p, select, button {
+	font-size:  20px;
+}
+
 /* Line dividing the logo from the rest of information on the three pages */
 .line{
     background:black;
@@ -29,6 +33,7 @@
     height:auto;
     margin:0 auto;
     max-width: 1200px;
+    padding-right: 50px;
     width: fit-content;
 }
 
