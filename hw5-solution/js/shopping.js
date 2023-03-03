@@ -56,7 +56,7 @@ class roll {
 // Set that will house products intended to be checked out
 const shoppingCart = new Set();
 
-// Adding a new cart item to the shopping cart set
+// Adding a new cart item to the shopping cart set and updating the total price
 function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
     const cartItem = new roll(rollType, rollGlazing, packSize, rollPrice);
     shoppingCart.add(cartItem);
@@ -66,20 +66,20 @@ function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
 
 };    
 
-// Calculates and updates the final price on the product detail page
+// Calculates and updates the price of individual cart items 
 function shoppingCalculatePrice(basePrice, glazingPrice, packPrice) {
     const finalPrice = (basePrice+ glazingPrice) * packPrice;
     return finalPrice.toFixed(2);
 };
 
-// A loop to create and add each cart item to the shopping cart 
+// For of loop that creates cart item elements
 for (const cartItem of shoppingCart) {
     createCartItem(cartItem);
 };
 
-
+// Creates cart items and displays to the shopping page
 function createCartItem(cartItem){
-    // Grab a reference to the cinna roll template:
+    // Grabs a reference to the cinna roll template:
     const template = document.querySelector('#cinna-roll-template');
     const clone = template.content.cloneNode(true);
     cartItem.element = clone.querySelector('.cartItem');
@@ -99,18 +99,20 @@ function createCartItem(cartItem){
 
     const cinnaRollFinalPrice = clone.querySelector('.cartItemPrice');
     cinnaRollFinalPrice.textContent = '$' + cartItem.basePrice;    
-
+    
+    // Removes cart items based on user input (click)
     const removeCartItemBtn = clone.querySelector('.removeBtn');
     removeCartItemBtn.addEventListener('click', () =>{
         deleteCartItem(cartItem);
     });
 
+    // Adding cart item elements to the DOM to be displayed
     const cartItemsContainer = document.querySelector('.cart-items');
     cartItemsContainer.appendChild(clone);
 
 };
 
-// Updating the totalPrice of the current cart Item
+// Updating the tota lPrice of the current items in cart
 function updateTotalPrice(cartItem) {
     let totalPrice = 0;
     for (const cartItem of shoppingCart) {
@@ -119,7 +121,7 @@ function updateTotalPrice(cartItem) {
     document.querySelector('.shopping-total-price').textContent = '$' + totalPrice.toFixed(2);
 };
 
-// Deletes Cart Item from Shopping Carr
+// Deletes Cart Item from Shopping Car6
 function deleteCartItem(cartItem){
     cartItem.element.remove();
     shoppingCart.delete(cartItem);

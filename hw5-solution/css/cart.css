@@ -104,14 +104,6 @@
 
 }
 
-/* Total and price from the items in the shopping cart */
-/* .shopping-total{
-	flex: 1 0 auto;
-	margin-left: 30px; */
-
-    /* margin-left: 20%; */
-/* } */
-
 /* Checkout Button */
 #checkout-button{
     background-color: yellow;
