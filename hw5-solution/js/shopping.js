@@ -105,8 +105,8 @@ function createCartItem(cartItem){
         deleteCartItem(cartItem);
     });
 
-    const shoppingCartContent = document.querySelector(".shopping-content");
-    shoppingCartContent.appendChild(clone);
+    const cartItemsContainer = document.querySelector('.cart-items');
+    cartItemsContainer.appendChild(clone);
 
 };
 

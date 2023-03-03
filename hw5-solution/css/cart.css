@@ -28,10 +28,13 @@
 }
 
 /* Refers to entire area of shopping cart page below its heading */
-.shopping-content{
+.shopping-content {
+    display: flex;
     flex-direction: column;
-	padding-left: 40%;
-}
+    justify-content: flex-start;
+    padding-left: 40%;
+  }
+  
 
 /* Content that is on the right side of the overall shopping cart page */
 .right-shopping{
