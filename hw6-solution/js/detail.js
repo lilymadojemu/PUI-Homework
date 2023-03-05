@@ -153,10 +153,11 @@ class Roll {
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
-        const addToCart = document.querySelector('.adding-to-cart');
-        addToCart.onclick = this.createRoll;
     }
 };
+
+const addToCart = document.querySelector('.adding-to-cart');
+addToCart.onclick = this.createRoll;
 
 // Creating an instance of the class Roll when clicking Add to Cart Button 
 function createRoll() {
@@ -165,6 +166,28 @@ function createRoll() {
     const currentBasePrice = rolls[rollType]['basePrice'];
     const cartRoll = new Roll(rollType,currentRollGlazing,currentPackSize, currentBasePrice);
     cart.push(cartRoll);
-    console.log(cart);
+    
+    saveToLocalStorage();
+    // printing the current contents of the cart in local storage after saving
+    console.log(cartString);
+
     return cartRoll;
 };
+
+function saveToLocalStorage(){
+    console.log(cart);
+
+    const cartString = JSON.stringify(cart);
+    console.log(cartString);
+
+    localStorage.setItem('storedCartItems', cartString);
+    
+}
+
+if (localStorage.getItem('storedCartItems') != null) {
+    retrieveFromLocalStorage();
+}
+  
+if (localStorage.getItem('storedCartItems') == null) {
+const cartItemsArray = [];
+}
