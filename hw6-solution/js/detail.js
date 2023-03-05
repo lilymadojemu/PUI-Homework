@@ -175,13 +175,14 @@ function createRoll() {
 };
 
 function saveToLocalStorage(){
-    console.log(cart);
-
     const cartString = JSON.stringify(cart);
-    console.log(cartString);
 
     localStorage.setItem('storedCartItems', cartString);
     
+}
+
+function retrieveFromLocalStorage(){
+    console.log('You have storage!');
 }
 
 if (localStorage.getItem('storedCartItems') != null) {
@@ -189,5 +190,5 @@ if (localStorage.getItem('storedCartItems') != null) {
 }
   
 if (localStorage.getItem('storedCartItems') == null) {
-const cartItemsArray = [];
+const cart = [];
 }

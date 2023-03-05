@@ -126,35 +126,36 @@ function deleteCartItem(cartItem){
     cartItem.element.remove();
     shoppingCart.delete(cartItem);
     updateTotalPrice(cartItem);
+    saveToLocalStorage();
 };
 
-// Rolls in the shopping cart
-const rollOne = addNewRoll(
-    'Original',
-    'Sugar Milk',
-    '1',
-    calculatedPrice = shoppingCalculatePrice(rolls['Original']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['1']),
-);
+function retrieveFromLocalStorage() {
+    const cartString = localStorage.getItem('storedCartItems');
+    const cart = JSON.parse(cartString);
+    console.log(cart);
+    for (const cartData of cart){
+        const cartItem = new roll(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
+        console.log(cartItem);
+        createCartItem(cartItem);
+    }
+};
 
-const rollTwo = addNewRoll (
-    'Walnut',
-    'Vanilla Milk',
-    '12',
-    calculatedPrice = shoppingCalculatePrice(rolls['Walnut']['basePrice'], glazingOptions['Vanilla Milk'], packSizeOptions['12']),
-);
+// function saveToLocalStorage(){
+    
+//     console.log(cart);
 
-const rollThree = addNewRoll (
-    'Raisin',
-    'Sugar Milk',
-    '3',
-    calculatedPrice = shoppingCalculatePrice(rolls['Raisin']['basePrice'], glazingOptions['Sugar Milk'], packSizeOptions['3']),
-);
+//     const cartString = JSON.stringify(shoppingCart);
+//     console.log(cartString);
 
-const rollFour = addNewRoll (
-    'Apple',
-    'Original',
-    '3',
-    calculatedPrice = shoppingCalculatePrice(rolls['Apple']['basePrice'], glazingOptions['Keep Original'], packSizeOptions['3']),
-);
+//     localStorage.setItem('storedCartItems', cartString);
+    
+// }
 
-
+// Attempting to retrieve cart from local storage
+if (localStorage.getItem('storedCartItems') != null) {
+    retrieveFromLocalStorage();
+}
+  
+if (localStorage.getItem('storedCartItems') == null) {
+const shoppingCart = [];
+}
