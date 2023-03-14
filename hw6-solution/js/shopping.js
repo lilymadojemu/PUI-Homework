@@ -157,5 +157,5 @@ if (localStorage.getItem('storedCartItems') != null) {
 }
   
 if (localStorage.getItem('storedCartItems') == null) {
-const shoppingCart = [];
+    const shoppingCart = [];
 }

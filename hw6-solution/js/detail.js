@@ -168,17 +168,15 @@ function createRoll() {
     cart.push(cartRoll);
     
     saveToLocalStorage();
-    // printing the current contents of the cart in local storage after saving
-    console.log(cartString);
 
     return cartRoll;
 };
 
 function saveToLocalStorage(){
     const cartString = JSON.stringify(cart);
-
     localStorage.setItem('storedCartItems', cartString);
-    
+    // printing the current contents of the cart in local storage after saving
+    console.log(cartString);
 }
 
 function retrieveFromLocalStorage(){
@@ -190,5 +188,6 @@ if (localStorage.getItem('storedCartItems') != null) {
 }
   
 if (localStorage.getItem('storedCartItems') == null) {
-const cart = [];
+    const cart = [];
 }
+
