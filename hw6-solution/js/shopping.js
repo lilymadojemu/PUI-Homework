@@ -1,3 +1,4 @@
+// Rolls Data
 const rolls = {
     "Original": {
         "basePrice": 2.49,
@@ -25,7 +26,7 @@ const rolls = {
     }    
 };
 
-// Roll Class used to save all of the current product Information
+// roll Class used to save all of the current product Information
 class roll {
     constructor(rollType, rollGlazing, packSize, rollPrice) {
         this.type = rollType;
@@ -39,15 +40,8 @@ class roll {
 // Array that will house products intended to be checked out
 let shoppingCart = [];
 
-// Adding a new cart item to the shopping cart set and updating the total price
-function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
-    const cartItem = new roll(rollType, rollGlazing, packSize, rollPrice);
-    shoppingCart.add(cartItem);
-    createCartItem(cartItem);
-    updateTotalPrice(cartItem);
-    return cartItem;    
-
-};    
+// Final Price before being updated
+document.querySelector('.shopping-total-price').textContent = '$' + 0.00;
 
 // Calculates and updates the price of individual cart items 
 function shoppingCalculatePrice(basePrice, glazingPrice, packPrice) {
@@ -97,7 +91,7 @@ function createCartItem(cartItem){
     updateTotalPrice(cartItem);
 };
 
-// Updating the tota lPrice of the current items in cart
+// Updating the total Price of the current items in cart
 function updateTotalPrice(cartItem) {
     let totalPrice = 0;
     for (const cartItem of shoppingCart) {
@@ -109,25 +103,28 @@ function updateTotalPrice(cartItem) {
 // Deletes Cart Item from Shopping Cart
 function deleteCartItem(cartItem){
     // Credit: ChatGPT
-    const cartItemIndex = shoppingCart.findIndex(item => item.id === cartItem.id);
-    if (cartItemIndex !== -1) {
-        shoppingCart.splice(cartItemIndex, 1);
-        console.log(shoppingCart);
-        updateTotalPrice(cartItem);
-        saveToLocalStorage();
-        cartItem.element.remove();
-    }
+    // const cartItemIndex = shoppingCart.findIndex(item => item.id === cartItem.id);
+    shoppingCart.splice(shoppingCart.indexOf(cartItem), 1); // remove roll from cart
+    // shoppingCart.splice(cartItemIndex, 1);
+    console.log(shoppingCart);
+    updateTotalPrice(cartItem);
+    console.log('This element should be removed from shoppingCart and local storage: ' + cartItem.type);
+    cartItem.element.remove();        
+    saveToLocalStorage();
+    
 };
 
 function retrieveFromLocalStorage() {
     const cartString = localStorage.getItem('storedCartItems');
-    const storedCart = JSON.parse(cartString);
-    // Need to reference shopping cart so that items can be removed
-    if (storedCart) {
+    console.log('retrieved ' + cartString);
+    if (cartString) {    
+        const storedCart = JSON.parse(cartString);
         shoppingCart = storedCart;
         console.log(shoppingCart);
 
         for (const cartData of shoppingCart) {
+            // A check to make sure cartData (information about a single cart object) has not been deleted
+            console.log(cartData);
             const cartItem = new roll(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
             createCartItem(cartItem);
         }
@@ -135,10 +132,13 @@ function retrieveFromLocalStorage() {
 };
 // 
 function saveToLocalStorage(){
+    console.log('saved to local storage: ' + shoppingCart);
     const cartString = JSON.stringify(shoppingCart);
+    console.log(shoppingCart);
     localStorage.setItem('storedCartItems', cartString);
+    console.log('storedCartItems:' + localStorage.storedCartItems)
     // printing the current contents of the cart in local storage after saving
-    console.log(cartString);
+    console.log('final cartstring' + cartString);
 }
 
 // Attempting to retrieve cart from local storage
