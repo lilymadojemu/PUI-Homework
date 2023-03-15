@@ -41,6 +41,7 @@
     display: flex;
 	flex-wrap: wrap;
 
+
 }
 
 /* Cart item description of Original Cinnamon roll */
@@ -96,8 +97,8 @@
 /* Prices of individual in-cart items*/
 .cartItemPrice{
     margin: auto;
-    margin-left:50%;
-    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: 0;
     width: 290px; 
     text-align: right;
     padding-top: 50px;

@@ -53,7 +53,7 @@ let all_pack_size = [];
 let glazingSelectElement = document.querySelector('#glazing-selector');
 
 // For loop that adds glazing options to glazing drop down menu
-for ( var i in glazingOptions) {
+for (var i in glazingOptions) {
     all_glazing.push(i);
     var option = document.createElement('option');
     option.text = i;
@@ -86,7 +86,7 @@ var glazingPrice = '0';
 var packPrice = '1';
 
 // Array that will house products intended to be checked out
-const cart = [];
+let cart = [];
 
 // Gather info from URL
 const queryString = window.location.search;
@@ -127,7 +127,7 @@ function glazingChange(element) {
     let key = element.value;
     currentSelectedGlaze = key;
     glazingPrice = glazingOptions[key];
-    calculatePrice();
+    calculatePrice(rolls[rollType]['basePrice'], glazingPrice, packPrice);
 };
 
 // Get's the current pack size price and change's the final price based on user's selection
@@ -135,16 +135,16 @@ function packSizeChange(element) {
     let key = element.value;
     currentSelectedPackSize = key;   
     packPrice = packSizeOptions[key];
-    calculatePrice();
+    calculatePrice(rolls[rollType]['basePrice'], glazingPrice, packPrice);
 };
 
 // Calculates and updates the final price on the product detail page
-function calculatePrice() {
-    const basePrice = parseFloat(rolls[rollType]['basePrice']);
+function calculatePrice(basePrice, glazingPrice, packPrice) {
     const finalPrice = (basePrice + glazingPrice) * packPrice;
     const productDetailPrice = document.querySelector('.detail-price');
     // Credits .toFixed(): https://www.w3schools.com/jsref/jsref_tofixed.asp#:~:text=The%20toFixed()%20method%20rounds,a%20specified%20number%20of%20decimals.
     productDetailPrice.innerText = finalPrice.toFixed(2);
+    return finalPrice.toFixed(2);
 };
 
 // Roll Class used to save all of the current product Information
@@ -164,8 +164,8 @@ addToCart.onclick = this.createRoll;
 function createRoll() {
     const currentRollGlazing = currentSelectedGlaze; 
     const currentPackSize = currentSelectedPackSize;
-    const currentBasePrice = rolls[rollType]['basePrice'];
-    const cartRoll = new Roll(rollType,currentRollGlazing,currentPackSize, currentBasePrice);
+    const currentBasePrice = parseFloat(rolls[rollType]['basePrice']);
+    const cartRoll = new Roll(rollType,currentRollGlazing,currentPackSize, calculatePrice(currentBasePrice, glazingPrice, packPrice));
     cart.push(cartRoll);
     
     saveToLocalStorage();
@@ -175,13 +175,21 @@ function createRoll() {
 
 function saveToLocalStorage(){
     const cartString = JSON.stringify(cart);
+    console.log(cart);
     localStorage.setItem('storedCartItems', cartString);
     // printing the current contents of the cart in local storage after saving
     console.log(cartString);
 }
 
+
 function retrieveFromLocalStorage(){
-    console.log('You have storage!');
+    const cartString = localStorage.getItem('storedCartItems');
+    const storedCart = JSON.parse(cartString);
+    // Credits: ChaptGPT, value of global variable cart changes
+    if (storedCart) {
+        cart = storedCart;
+        console.log(cart);
+    }
 }
 
 if (localStorage.getItem('storedCartItems') != null) {
@@ -192,121 +200,3 @@ if (localStorage.getItem('storedCartItems') == null) {
     const cart = [];
 }
 
-// Shopping Cart Page
-
-// Roll Class used to save all of the current product Information
-class roll {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = rollPrice;      
-    }
-};
-
-// Set that will house products intended to be checked out
-const shoppingCart = new Set();
-
-// Adding a new cart item to the shopping cart set and updating the total price
-function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
-    const cartItem = new roll(rollType, rollGlazing, packSize, rollPrice);
-    shoppingCart.add(cartItem);
-    createCartItem(cartItem);
-    updateTotalPrice(cartItem);
-    return cartItem;    
-
-};    
-
-// Calculates and updates the price of individual cart items 
-function shoppingCalculatePrice(basePrice, glazingPrice, packPrice) {
-    const finalPrice = (basePrice+ glazingPrice) * packPrice;
-    return finalPrice.toFixed(2);
-};
-
-// For of loop that creates cart item elements
-for (const cartItem of shoppingCart) {
-    createCartItem(cartItem);
-};
-
-// Creates cart items and displays to the shopping page
-function createCartItem(cartItem){
-    // Grabs a reference to the cinna roll template:
-    const template = document.querySelector('#cinna-roll-template');
-    const clone = template.content.cloneNode(true);
-    cartItem.element = clone.querySelector('.cartItem');
-
-    // update Dom Elements
-    const cinnaRollImage = clone.querySelector('.cartItemPic');
-    cinnaRollImage.src = `bakery_products/${cartItem.type.toLowerCase()}-cinnamon-roll.jpg`;
-
-    const cinnaRollType = clone.querySelector('.cartRollType');
-    cinnaRollType.textContent = cartItem.type + ' Cinnamon Roll';
-
-    const cinnaRollGlazing = clone.querySelector('.cartItemGlazing');
-    cinnaRollGlazing.textContent = 'Glazing: ' + cartItem.glazing; 
-    
-    const cinnaRollPackSize =  clone.querySelector('.cartItemPackSize');
-    cinnaRollPackSize.textContent = 'Pack Size: ' + cartItem.size;    
-
-    const cinnaRollFinalPrice = clone.querySelector('.cartItemPrice');
-    cinnaRollFinalPrice.textContent = '$' + cartItem.basePrice;    
-    
-    // Removes cart items based on user input (click)
-    const removeCartItemBtn = clone.querySelector('.removeBtn');
-    removeCartItemBtn.addEventListener('click', () =>{
-        deleteCartItem(cartItem);
-    });
-
-    // Adding cart item elements to the DOM to be displayed
-    const cartItemsContainer = document.querySelector('.cart-items');
-    cartItemsContainer.appendChild(clone);
-
-};
-
-// Updating the tota lPrice of the current items in cart
-function updateTotalPrice(cartItem) {
-    let totalPrice = 0;
-    for (const cartItem of shoppingCart) {
-        totalPrice += parseFloat(cartItem.basePrice);
-      };
-    document.querySelector('.shopping-total-price').textContent = '$' + totalPrice.toFixed(2);
-};
-
-// Deletes Cart Item from Shopping Car6
-function deleteCartItem(cartItem){
-    cartItem.element.remove();
-    shoppingCart.delete(cartItem);
-    updateTotalPrice(cartItem);
-    saveToLocalStorage();
-};
-
-function retrieveFromLocalStorage() {
-    const cartString = localStorage.getItem('storedCartItems');
-    const cart = JSON.parse(cartString);
-    console.log(cart);
-    for (const cartData of cart){
-        const cartItem = new roll(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
-        console.log(cartItem);
-        createCartItem(cartItem);
-    }
-};
-
-// function saveToLocalStorage(){
-    
-//     console.log(cart);
-
-//     const cartString = JSON.stringify(shoppingCart);
-//     console.log(cartString);
-
-//     localStorage.setItem('storedCartItems', cartString);
-    
-// }
-
-// Attempting to retrieve cart from local storage
-if (localStorage.getItem('storedCartItems') != null) {
-    retrieveFromLocalStorage();
-}
-  
-if (localStorage.getItem('storedCartItems') == null) {
-    const shoppingCart = [];
-}

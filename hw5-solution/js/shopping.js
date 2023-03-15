@@ -112,7 +112,7 @@ function createCartItem(cartItem){
 
 };
 
-// Updating the tota lPrice of the current items in cart
+// Updating the total Price of the current items in cart
 function updateTotalPrice(cartItem) {
     let totalPrice = 0;
     for (const cartItem of shoppingCart) {
