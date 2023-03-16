@@ -49,6 +49,13 @@ function shoppingCalculatePrice(basePrice, glazingPrice, packPrice) {
     return finalPrice.toFixed(2);
 };
 
+// Adding a new cart item to the shopping cart array and updating the total price
+function addNewRoll(rollType, rollGlazing, packSize, rollPrice) {
+    const cartItem = new roll(rollType, rollGlazing, packSize, rollPrice);
+    shoppingCart.push(cartItem);
+    return cartItem;    
+}; 
+
 // For of loop that creates cart item elements
 for (const cartItem of shoppingCart) {
     createCartItem(cartItem);
@@ -94,58 +101,53 @@ function createCartItem(cartItem){
 // Updating the total Price of the current items in cart
 function updateTotalPrice(cartItem) {
     let totalPrice = 0;
-    for (const cartItem of shoppingCart) {
-        totalPrice += parseFloat(cartItem.basePrice);
+    for (const item of shoppingCart) {
+        totalPrice += parseFloat(item.basePrice);
       };
     document.querySelector('.shopping-total-price').textContent = '$' + totalPrice.toFixed(2);
 };
 
+
 // Deletes Cart Item from Shopping Cart
 function deleteCartItem(cartItem){
-    // Credit: ChatGPT
-    // const cartItemIndex = shoppingCart.findIndex(item => item.id === cartItem.id);
-    shoppingCart.splice(shoppingCart.indexOf(cartItem), 1); // remove roll from cart
-    // shoppingCart.splice(cartItemIndex, 1);
-    console.log(shoppingCart);
-    updateTotalPrice(cartItem);
-    console.log('This element should be removed from shoppingCart and local storage: ' + cartItem.type);
-    cartItem.element.remove();        
+    // Removes selected element from the DOM
+    cartItem.element.remove();
+
+    // Remove the actual cartItem from shoppingCart array
+    shoppingCart.splice(shoppingCart.indexOf(cartItem), 1)
+   
+    // Update final price of cart item
+    updateTotalPrice(cartItem);    
+
+    // Update Local Storage
     saveToLocalStorage();
-    
 };
 
+// Retrieves shopping cart items from local storage
 function retrieveFromLocalStorage() {
     const cartString = localStorage.getItem('storedCartItems');
-    console.log('retrieved ' + cartString);
-    if (cartString) {    
-        const storedCart = JSON.parse(cartString);
-        shoppingCart = storedCart;
-        console.log(shoppingCart);
-
-        for (const cartData of shoppingCart) {
-            // A check to make sure cartData (information about a single cart object) has not been deleted
-            console.log(cartData);
-            const cartItem = new roll(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
-            createCartItem(cartItem);
-        }
+    const storedCartArray = JSON.parse(cartString);
+    console.log('retrieved from local storage ' + cartString);
+    for (const cartData of storedCartArray) {
+        const cartItem = new addNewRoll(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
+        createCartItem(cartItem);
+        console.log(storedCartArray);
     }
 };
-// 
-function saveToLocalStorage(){
-    console.log('saved to local storage: ' + shoppingCart);
-    const cartString = JSON.stringify(shoppingCart);
-    console.log(shoppingCart);
-    localStorage.setItem('storedCartItems', cartString);
-    console.log('storedCartItems:' + localStorage.storedCartItems)
-    // printing the current contents of the cart in local storage after saving
-    console.log('final cartstring' + cartString);
-}
 
-// Attempting to retrieve cart from local storage
+// Saves items in shopping cart to local storage
+function saveToLocalStorage(){
+    const cartString = JSON.stringify(shoppingCart);
+    localStorage.setItem('storedCartItems', cartString);    
+    // printing the current contents of the cart in local storage after saving
+    console.log('Items in shopping cart array: ' + shoppingCart);
+    console.log('Items in local storage: ' + localStorage.storedCartItems);
+};
+
 if (localStorage.getItem('storedCartItems') != null) {
     retrieveFromLocalStorage();
-}
-  
+};
+
 if (localStorage.getItem('storedCartItems') == null) {
-    const shoppingCart = [];
-}
+    let shoppingCart = [];
+};
