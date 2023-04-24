@@ -63,6 +63,7 @@ for (const cartItem of shoppingCart) {
 
 // Creates cart items and displays to the shopping page
 function createCartItem(cartItem){
+    console.log(cartItem);
     // Grabs a reference to the cinna roll template:
     const template = document.querySelector('#cinna-roll-template');
     const clone = template.content.cloneNode(true);
